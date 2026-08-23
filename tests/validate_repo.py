@@ -5,6 +5,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -49,10 +50,20 @@ for rel in required_files:
     require((ROOT / rel).is_file(), f"Pflichtdatei fehlt: {rel}")
 ok("Pflichtdateien vorhanden")
 
+# Every SVG must be valid XML. Browsers otherwise show an embedded-code error.
+svg_files = sorted(ROOT.rglob("*.svg"))
+require(bool(svg_files), "Keine SVG-Dateien gefunden")
+for svg_path in svg_files:
+    try:
+        ET.parse(svg_path)
+    except ET.ParseError as exc:
+        errors.append(f"Ungültiges SVG/XML {svg_path.relative_to(ROOT)}: {exc}")
+ok("Alle lokalen SVG-Dateien sind gültiges XML")
+
 # JSON and schema
 schema_validate(DATA, SCHEMA)
-require(DATA["meta"]["version"] == "3.1.1", "Unerwartete App-Version")
-require(DATA["meta"]["dataVersion"] == "2026-08-23.5", "Unerwartete Datenversion")
+require(DATA["meta"]["version"] == "3.1.2", "Unerwartete App-Version")
+require(DATA["meta"]["dataVersion"] == "2026-08-23.6", "Unerwartete Datenversion")
 require(len(DATA["entries"]) >= 20, "Zu wenige redaktionelle Einträge")
 ok("JSON-Daten und Schema lesbar")
 

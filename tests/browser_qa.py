@@ -51,9 +51,12 @@ def attach_error_listeners(page) -> None:
 try:
     with sync_playwright() as p:
         browser_type = p.chromium
+        configured_chromium = os.environ.get("GC26_CHROMIUM_PATH")
+        bundled_chromium = Path(p.chromium.executable_path)
+        chromium_path = configured_chromium or (str(bundled_chromium) if bundled_chromium.is_file() else "/usr/bin/chromium")
         context = browser_type.launch_persistent_context(
             user_data_dir=str(USER_DATA),
-            executable_path="/usr/bin/chromium",
+            executable_path=chromium_path,
             headless=True,
             viewport={"width": 390, "height": 844},
             locale="de-DE",
@@ -70,9 +73,9 @@ try:
 
         version = page.evaluate("window.__GC_APP__.version")
         base_count = page.evaluate("window.__GC_APP__.state.baseEntries.length")
-        assert_true(version == "3.1.1", f"Falsche App-Version im Browser: {version}")
+        assert_true(version == "3.1.2", f"Falsche App-Version im Browser: {version}")
         assert_true(base_count == 23, f"Falsche Eintragszahl im Browser: {base_count}")
-        passed("App lädt mit Version 3.1.1 und 23 redaktionellen Einträgen")
+        passed("App lädt mit Version 3.1.2 und 23 redaktionellen Einträgen")
 
         overflow = page.evaluate("document.documentElement.scrollWidth - document.documentElement.clientWidth")
         bg = page.evaluate("getComputedStyle(document.body).backgroundColor")
@@ -82,6 +85,27 @@ try:
         assert_true(page.locator("#home-top-picks .entry-card").count() >= 6, "Mainstream-Top-Picks fehlen")
         shot(page, "mobile-home-v3.png")
         passed("Landingpage ist mobil, weiß und ohne horizontalen Overflow")
+
+        # Decode every locally referenced illustration as a real browser image.
+        image_results = page.evaluate("""async () => {
+          const sources = [...new Set(window.__GC_APP__.state.baseEntries.map(entry => entry.bildUrl))];
+          const results = [];
+          for (const src of sources) {
+            const result = await new Promise(resolve => {
+              const image = new Image();
+              image.onload = () => resolve({src, ok: image.naturalWidth > 0 && image.naturalHeight > 0, width: image.naturalWidth, height: image.naturalHeight});
+              image.onerror = () => resolve({src, ok: false, width: 0, height: 0});
+              image.src = src;
+            });
+            results.push(result);
+          }
+          return results;
+        }""")
+        broken_images = [item for item in image_results if not item["ok"]]
+        assert_true(not broken_images, f"Lokale Illustrationen lassen sich nicht rendern: {broken_images}")
+        assert_true(any(item["src"].endswith("retro.svg") for item in image_results), "retro.svg wurde nicht geprüft")
+        assert_true(any(item["src"].endswith("talk.svg") for item in image_results), "talk.svg wurde nicht geprüft")
+        passed("Alle lokalen Illustrationen einschließlich Retro und Talk werden als Bilder gerendert")
 
         # iOS install help must be available even without beforeinstallprompt.
         page.evaluate("window.__GC_APP__.state.installPrompt = null")
@@ -245,7 +269,7 @@ try:
         # Browser restart without network, using the same profile.
         offline_context = browser_type.launch_persistent_context(
             user_data_dir=str(USER_DATA),
-            executable_path="/usr/bin/chromium",
+            executable_path=chromium_path,
             headless=True,
             viewport={"width": 390, "height": 844},
             locale="de-DE",

@@ -1,19 +1,34 @@
-# Abschlussprüfung – GC26 Guide 3.1.1
+# Abschlussprüfung – GC26 Guide 3.1.2
 
 Prüfdatum: **23. August 2026**  
-Datenversion: **2026-08-23.5**  
+Datenversion: **2026-08-23.6**  
 Ergebnis: **bestanden**
 
 ## Zusammenfassung
 
-Die Anwendung wurde als statisches GitHub-Pages-Projekt, mobile Web-App und offline startfähige PWA geprüft. Der finale Datenbestand enthält **23 redaktionelle Einträge** und **25 eindeutige externe Ziel-URLs**.
+Die Anwendung wurde als statisches GitHub-Pages-Projekt, mobile Web-App und offline startfähige PWA geprüft. Der Datenbestand enthält **23 redaktionelle Einträge** und **25 eindeutige externe Ziel-URLs**.
 
-- statische Struktur- und Datenprüfung: **10 von 10 Prüfgruppen bestanden**
-- mobiler Browser- und Interaktionstest: **15 von 15 Prüfgruppen bestanden**
+- statische Struktur-, Daten- und SVG-Prüfung: **11 von 11 Prüfgruppen bestanden**
+- lokale SVG-Dateien: **12 von 12 als gültiges XML geparst**
+- mobiler Browser- und Interaktionstest: **16 von 16 Prüfgruppen bestanden**
+- sämtliche in den Daten referenzierten Illustrationen im Browser geladen und dekodiert: **bestanden**
 - Offline-Neustart mit demselben Browserprofil und vollständig deaktiviertem Netzwerk: **bestanden**
 - bekannte 404-Ziele im ausgelieferten Datenbestand: **0**
 - Smartphone-Testbreite: **390 × 844 Pixel**
 - vollständiger Browser- und Offline-Test unter einem GitHub-Pages-typischen Projekt-Unterpfad: **bestanden**
+
+## Behobener SVG-Fehler
+
+In `assets/illustrations/retro.svg` enthielten Titel und sichtbarer Text ein nicht maskiertes `&`. Das ist in XML ungültig und führte beim direkten Öffnen beziehungsweise Einbetten zu **„Error rendering embedded code – Invalid image source“**. Derselbe Fehler bestand außerdem in `assets/illustrations/talk.svg`.
+
+Beide Dateien verwenden nun korrekt `&amp;`. Zusätzlich wurde die Service-Worker-Cache-Version erhöht, damit bereits installierte Fassungen die reparierten Grafiken beim nächsten Online-Aufruf übernehmen.
+
+Der Fehler wird nun doppelt abgesichert:
+
+1. `tests/validate_repo.py` parst sämtliche lokalen SVG-Dateien als XML.
+2. `tests/browser_qa.py` lädt jede in `data/data.json` referenzierte Illustration als echtes Browserbild und prüft ihre natürlichen Abmessungen.
+
+Ein zusätzlich erzeugter Rendering-Nachweis liegt unter [`assets/qa/retro-svg-render-v3-1-2.png`](./assets/qa/retro-svg-render-v3-1-2.png).
 
 ## Statische Prüfung
 
@@ -27,25 +42,31 @@ node --check js/app.js
 Geprüft wurden:
 
 1. vollständige Pflichtdateien und Ordnerstruktur
-2. gültiges JSON und Schema
-3. Big Player, Nintendo, Indie, Retro, Community und Reality-Checks
-4. Pflichtlinks, Bilder, Besuchstage und Kartenpositionen jedes Eintrags
-5. der vorgegebene Spielwissenschafts-Talk mit Datum, Zeit und Stage D
-6. vollständige Abdeckung aller Ziel-URLs im Link-Audit
-7. Manifest, Apple-Touch-Icon und PWA-Icons
-8. vollständige App-Shell im Service Worker
-9. iOS-Meta-Tags und Ausschluss der früheren fehlerhaften Gamescom-URL-Struktur
-10. ausschließlich relative interne Pfade für GitHub-Pages-Unterverzeichnisse
+2. gültiges XML sämtlicher lokaler SVG-Dateien
+3. gültiges JSON und Schema
+4. Big Player, Nintendo, Indie, Retro, Community und Reality-Checks
+5. Pflichtlinks, Bilder, Besuchstage und Kartenpositionen jedes Eintrags
+6. der vorgegebene Spielwissenschafts-Talk mit Datum, Zeit und Stage D
+7. vollständige Abdeckung aller Ziel-URLs im Link-Audit
+8. Manifest, Apple-Touch-Icon und PWA-Icons
+9. vollständige App-Shell im Service Worker
+10. iOS-Meta-Tags und Ausschluss der früheren fehlerhaften Gamescom-URL-Struktur
+11. ausschließlich relative interne Pfade für GitHub-Pages-Unterverzeichnisse
 
 Maschinenlesbares Ergebnis: [`data/static-validation.json`](./data/static-validation.json)
 
 ## Browser- und Offline-Prüfung
 
-Der automatisierte Test verwendet Chromium über Playwright, eine mobile Viewportgröße von 390 × 844 Pixel, die Zeitzone `Europe/Berlin` und einen vollständig neuen Browser-Speicherbereich. Der finale Lauf wurde gegen die **exakt wieder entpackten Bytes des Deploy-ZIPs** unter `http://127.0.0.1:8766/gamescom-guide-2026-v3-1-1-verify/deploy/` ausgeführt – also unter demselben Unterpfad-Prinzip wie ein GitHub-Pages-Projektrepository.
+Der automatisierte Test verwendet Chromium über Playwright, eine mobile Viewportgröße von 390 × 844 Pixel, die Zeitzone `Europe/Berlin` und einen vollständig neuen Browser-Speicherbereich. Der finale Lauf wurde gegen die **exakt wieder entpackten Bytes des Deploy-ZIPs** unter
+
+`http://127.0.0.1:8767/gamescom-guide-2026-v3-1-2-verify/deploy/`
+
+ausgeführt – also unter demselben Unterpfad-Prinzip wie ein GitHub-Pages-Projektrepository.
 
 Abgedeckt sind unter anderem:
 
 - Landingpage, Hallenüberblick und weißes Layout ohne horizontalen Seiten-Overflow
+- tatsächliches Browser-Rendering aller lokalen Illustrationen, ausdrücklich einschließlich `retro.svg` und `talk.svg`
 - direkte Hallenwahl H5 bis H10 und Confex
 - einklappbare Detailbereiche
 - Favoriten, hervorgehobene Kartenmarker und Favoriten-Fokusmodus
@@ -62,10 +83,6 @@ Abgedeckt sind unter anderem:
 
 Maschinenlesbares Ergebnis: [`data/browser-qa.json`](./data/browser-qa.json)  
 Ausführlicher Bericht: [`QA_BROWSER.md`](./QA_BROWSER.md)
-
-## Korrigierter Offline-Randfall
-
-Bei einem abschließenden Wiederholungstest zeigte sich nach einem kalten Offline-Start ein zeitlicher Zwischenzustand, in dem die Kartendaten bereits geladen waren, der Hash-Wechsel zur Kartenansicht aber noch auf das nächste Browserereignis wartete. Die Navigation rendert die Zielansicht jetzt sofort und zusätzlich beim regulären `hashchange`. Der Offline-Test wartet außerdem explizit auf die Marker-Darstellung. Der vollständige Testlauf wurde danach erneut erfolgreich ausgeführt.
 
 ## Quellen- und Linkprüfung
 

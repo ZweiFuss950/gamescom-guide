@@ -1,5 +1,15 @@
 # Änderungsprotokoll
 
+## 3.1.2 – 23. August 2026
+
+### Grafik- und Cache-Fix
+
+- ungültige XML-Zeichen in `assets/illustrations/retro.svg` korrigiert (`&` → `&amp;`)
+- denselben bislang unbemerkten XML-Fehler in `assets/illustrations/talk.svg` korrigiert
+- Service-Worker-Cache auf eine neue Version erhöht, damit bereits installierte Apps die reparierten Grafiken laden
+- statischen XML-Test für sämtliche lokalen SVG-Dateien ergänzt
+- Browser-Test ergänzt, der alle in den Daten referenzierten Illustrationen tatsächlich als Bilder lädt und deren Abmessungen prüft
+
 ## 3.1.1 – 23. August 2026
 
 ### Quellen und Inhalte

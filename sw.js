@@ -1,5 +1,5 @@
 /* GC26 Guide service worker – deploy 2026-08-23 */
-const CACHE_VERSION = 'gc26-guide-v3-1-20260823-2';
+const CACHE_VERSION = 'gc26-guide-v3-1-20260823-3';
 const APP_SHELL = [
   './',
   './index.html',

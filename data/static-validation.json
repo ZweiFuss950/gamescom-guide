@@ -2,6 +2,7 @@
   "ok": true,
   "checks": [
     "Pflichtdateien vorhanden",
+    "Alle lokalen SVG-Dateien sind gültiges XML",
     "JSON-Daten und Schema lesbar",
     "Big Player, Fan-, Indie-, Retro- und Reality-Checks enthalten",
     "Pflichtlinks, Tage, Bilder und Kartenpositionen je Eintrag geprüft",

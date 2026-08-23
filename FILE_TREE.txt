@@ -26,7 +26,8 @@
 │       ├── mobile-map-favorites-v3.png
 │       ├── mobile-map-own-note-v3.png
 │       ├── mobile-offline-restart-v3.png
-│       └── mobile-schedule-live-v3.png
+│       ├── mobile-schedule-live-v3.png
+│       └── retro-svg-render-v3-1-2.png
 ├── css/
 │   └── styles.css
 ├── data/

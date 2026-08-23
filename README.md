@@ -1,6 +1,6 @@
 # GC26 Guide – Gamescom 2026 für Donnerstag und Freitag
 
-**Finale geprüfte Version: 3.1.1 · Datenstand 23. August 2026**
+**Finale geprüfte Version: 3.1.2 · Datenstand 23. August 2026**
 
 Ein statischer, mobile-first Gamescom-Guide für **Donnerstag, 27. August 2026**, und **Freitag, 28. August 2026** in der Koelnmesse. Die App läuft ohne Framework und Build-Step auf GitHub Pages und kann nach einem vollständigen Online-Aufruf weitgehend offline genutzt werden.
 
@@ -58,13 +58,13 @@ Das offizielle Gamescom-Ausstellerportal arbeitet dynamisch. Deshalb führen die
 In [`sw.js`](./sw.js) den Wert von `CACHE_VERSION` erhöhen, zum Beispiel von:
 
 ```js
-const CACHE_VERSION = 'gc26-guide-v3-1-20260823-2';
+const CACHE_VERSION = 'gc26-guide-v3-1-20260823-3';
 ```
 
 auf:
 
 ```js
-const CACHE_VERSION = 'gc26-guide-v3-1-20260823-3';
+const CACHE_VERSION = 'gc26-guide-v3-1-20260823-4';
 ```
 
 Beim nächsten Online-Aufruf installiert der Browser den neuen Cache und entfernt ältere App-Caches.
@@ -97,7 +97,7 @@ python3 tests/validate_repo.py
 python3 tests/browser_qa.py
 ```
 
-Der Browser-Test verwendet Playwright und Chromium. Die fertigen Prüfberichte und Smartphone-Screenshots liegen in `QA_REPORT.md`, `data/browser-qa.json` und `assets/qa/`.
+Der Browser-Test verwendet Playwright und Chromium. Die statische Prüfung validiert zusätzlich jede lokale SVG-Datei als XML; der Browser-Test lädt alle referenzierten Illustrationen als echte Bilder. Die fertigen Prüfberichte und Smartphone-Screenshots liegen in `QA_REPORT.md`, `data/browser-qa.json` und `assets/qa/`.
 
 ## Datenschutz
 

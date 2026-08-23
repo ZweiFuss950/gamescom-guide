@@ -1,8 +1,8 @@
 # Mobiler Browser- und Offline-Test
 
 Prüfdatum: **23. August 2026**  
-App-Version: **3.1.1**  
-Ergebnis: **15 von 15 Prüfgruppen bestanden**
+App-Version: **3.1.2**  
+Ergebnis: **16 von 16 Prüfgruppen bestanden**
 
 ## Testumgebung
 
@@ -16,26 +16,35 @@ Ergebnis: **15 von 15 Prüfgruppen bestanden**
 | Testkoordinaten | 50.9469, 6.9833 |
 | Speicher | neues temporäres Browserprofil |
 | Testobjekt | exakt entpacktes Deploy-ZIP |
-| URL-Struktur | Projekt-Unterpfad `/gamescom-guide-2026-v3-1-1-verify/deploy/` |
+| URL-Struktur | Projekt-Unterpfad `/gamescom-guide-2026-v3-1-2-verify/deploy/` |
 | Offline-Test | Browser geschlossen, mit demselben Profil neu gestartet, Netzwerk deaktiviert |
 
 ## Bestandene Prüfgruppen
 
-1. App lädt mit Version 3.1.1 und 23 redaktionellen Einträgen.
+1. App lädt mit Version 3.1.2 und 23 redaktionellen Einträgen.
 2. Landingpage ist mobil, weiß und ohne horizontalen Seiten-Overflow.
-3. Die iOS-Installationshilfe ist auch ohne Chromium-Installationsprompt erreichbar.
-4. Direkte Hallenwahl und einklappbare Detailinformationen funktionieren.
-5. Favoritenmarker, Fokusmodus und Tastaturbedienung der Karte funktionieren.
-6. Der manuelle Indoor-Standort-Fallback funktioniert.
-7. Eigene Einträge erscheinen lokal, als Favorit und auf der Karte.
-8. Notizblock, Bearbeiten und JSON-Export funktionieren.
-9. Favoriten, aktuelle Halle und Notizen bleiben nach Reload erhalten.
-10. Der Live-Zeitplan erkennt laufende Termine und hält Talks kompakt.
-11. Der Deep-Link vom Zeitplan zur fokussierten Kartenposition funktioniert.
-12. Der Favoriten-Tab gruppiert Inhalte und bietet die relevanten Aktionen.
-13. Freitextsuche, Trefferzähler und Ein-Klick-Reset funktionieren.
-14. Der Service Worker kontrolliert die App und cached die vollständige App-Shell.
-15. Die App startet nach echtem Browser-Neustart offline mit Karte, Daten, Favoriten und Notizen.
+3. Alle lokalen Illustrationen einschließlich Retro und Talk werden als Bilder gerendert.
+4. Die iOS-Installationshilfe ist auch ohne Chromium-Installationsprompt erreichbar.
+5. Direkte Hallenwahl und einklappbare Detailinformationen funktionieren.
+6. Favoritenmarker, Fokusmodus und Tastaturbedienung der Karte funktionieren.
+7. Der manuelle Indoor-Standort-Fallback funktioniert.
+8. Eigene Einträge erscheinen lokal, als Favorit und auf der Karte.
+9. Notizblock, Bearbeiten und JSON-Export funktionieren.
+10. Favoriten, aktuelle Halle und Notizen bleiben nach Reload erhalten.
+11. Der Live-Zeitplan erkennt laufende Termine und hält Talks kompakt.
+12. Der Deep-Link vom Zeitplan zur fokussierten Kartenposition funktioniert.
+13. Der Favoriten-Tab gruppiert Inhalte und bietet die relevanten Aktionen.
+14. Freitextsuche, Trefferzähler und Ein-Klick-Reset funktionieren.
+15. Der Service Worker kontrolliert die App und cached die vollständige App-Shell.
+16. Die App startet nach echtem Browser-Neustart offline mit Karte, Daten, Favoriten und Notizen.
+
+## SVG-Rendering
+
+Der Test lädt alle eindeutigen `bildUrl`-Werte des redaktionellen Datenbestands in jeweils ein echtes `Image`-Objekt. Er gilt nur als bestanden, wenn `onload` ausgelöst wird und `naturalWidth` sowie `naturalHeight` größer als null sind. Dadurch werden syntaktisch beschädigte SVG-Dateien nicht mehr nur als vorhandene Datei, sondern als tatsächlich renderbares Bild geprüft.
+
+Zusätzlicher Rendering-Nachweis:
+
+- [`assets/qa/retro-svg-render-v3-1-2.png`](./assets/qa/retro-svg-render-v3-1-2.png)
 
 ## Smartphone-Screenshots
 
@@ -52,8 +61,8 @@ Ergebnis: **15 von 15 Prüfgruppen bestanden**
 Bei lokal laufendem Server:
 
 ```bash
-python3 -m http.server 8766 --directory /mnt/data
-GC26_BASE_URL=http://127.0.0.1:8766/gamescom-guide-2026-v3-1-1-verify/deploy/ python3 tests/browser_qa.py
+python3 -m http.server 8767 --directory /mnt/data
+GC26_BASE_URL=http://127.0.0.1:8767/gamescom-guide-2026-v3-1-2-verify/deploy/ python3 tests/browser_qa.py
 ```
 
-Das ausführbare Testergebnis wird nach jedem Lauf nach [`data/browser-qa.json`](./data/browser-qa.json) geschrieben. Testexporte und temporäre Browserprofile werden automatisch entfernt.
+Optional kann mit `GC26_CHROMIUM_PATH` ein konkretes Chromium-Binary angegeben werden. Das ausführbare Testergebnis wird nach jedem Lauf nach [`data/browser-qa.json`](./data/browser-qa.json) geschrieben. Testexporte und temporäre Browserprofile werden automatisch entfernt.
