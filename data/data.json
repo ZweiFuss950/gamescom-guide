@@ -1,0 +1,1572 @@
+{
+  "meta": {
+    "title": "Gamescom 2026 – Dein Zwei-Tage-Guide",
+    "shortTitle": "GC26 Guide",
+    "version": "3.1.1",
+    "dataVersion": "2026-08-23.5",
+    "sourceReviewDate": "2026-08-23",
+    "venue": "Koelnmesse, Köln",
+    "coordinates": {
+      "lat": 50.9469,
+      "lon": 6.9833
+    },
+    "stay": {
+      "start": "2026-08-27T10:00:00+02:00",
+      "end": "2026-08-28T20:00:00+02:00",
+      "days": [
+        {
+          "date": "2026-08-27",
+          "label": "Donnerstag",
+          "short": "Do",
+          "hours": "10:00–20:00"
+        },
+        {
+          "date": "2026-08-28",
+          "label": "Freitag",
+          "short": "Fr",
+          "hours": "10:00–20:00"
+        }
+      ]
+    },
+    "officialUrls": {
+      "exhibitors": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "hallPlan": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/hall-plan/",
+      "congress": "https://congress.gamescom.global/de/programm/"
+    },
+    "sourcePolicy": "Offizielle Gamescom-Links führen ausschließlich in das aktuelle 2026-Ausstellerportal, den aktuellen Hallenplan oder das Congress-Programm. Frühere Besucher-Deep-Links wurden entfernt. Bei dynamischen Ausstellerprofilen zeigt die App zusätzlich den exakten Suchbegriff an.",
+    "positionDisclaimer": "Indoor-GPS kann in Stahlhallen um viele Meter abweichen. Die Standortanzeige ist nur grob; die manuelle Hallenauswahl ist auf dem Gelände meist verlässlicher.",
+    "lastUpdatedLabel": "Quellenstand 23. August 2026"
+  },
+  "categories": [
+    {
+      "id": "nintendo",
+      "label": "Nintendo & Switch 2",
+      "shortLabel": "Nintendo",
+      "description": "Nintendo, Switch 2 und Drittanbieter-Titel, die auf Nintendos neuer Hardware spielbar sind.",
+      "color": "#e60012",
+      "icon": "N"
+    },
+    {
+      "id": "retro",
+      "label": "Retro & Arcade",
+      "shortLabel": "Retro",
+      "description": "Klassische Konsolen, Heimcomputer, Arcade, Sammler:innen und spielbare Nostalgie.",
+      "color": "#f97316",
+      "icon": "R"
+    },
+    {
+      "id": "indie",
+      "label": "Indie",
+      "shortLabel": "Indie",
+      "description": "Unabhängige Studios und kuratierte Gemeinschaftsstände wie die Indie Arena Booth.",
+      "color": "#7c3aed",
+      "icon": "I"
+    },
+    {
+      "id": "goodies",
+      "label": "Goodies & Freebies",
+      "shortLabel": "Goodies",
+      "description": "Belegte oder realistische Gratisaktionen. „Solange der Vorrat reicht“ bedeutet: früh hingehen.",
+      "color": "#16a34a",
+      "icon": "G"
+    },
+    {
+      "id": "community",
+      "label": "Community & Fanclub",
+      "shortLabel": "Community",
+      "description": "Fanclubs, Cosplay, Treffen, Community-Flächen und gemeinschaftliche Aktionen.",
+      "color": "#db2777",
+      "icon": "C"
+    },
+    {
+      "id": "signing",
+      "label": "Signing & Meet-up",
+      "shortLabel": "Meet-up",
+      "description": "Signings, besondere Gäste oder Community-Interaktionen – nur wenn konkret bestätigt.",
+      "color": "#0891b2",
+      "icon": "M"
+    },
+    {
+      "id": "big-player",
+      "label": "Große Player",
+      "shortLabel": "Big Player",
+      "description": "Große Publisher, Plattformen und besonders publikumsstarke Messeauftritte.",
+      "color": "#2563eb",
+      "icon": "B"
+    },
+    {
+      "id": "talk",
+      "label": "Talks & Shows",
+      "shortLabel": "Talks",
+      "description": "Feste Bühnen-, Stream- und Congress-Termine während deines Aufenthalts.",
+      "color": "#9333ea",
+      "icon": "T"
+    },
+    {
+      "id": "hardware",
+      "label": "Hardware & Setup",
+      "shortLabel": "Hardware",
+      "description": "Monitore, Gaming-Technik, Barrierefreiheit und besondere Setup-Erlebnisse.",
+      "color": "#0f766e",
+      "icon": "H"
+    },
+    {
+      "id": "reality",
+      "label": "Reality-Checks",
+      "shortLabel": "Reality",
+      "description": "Hype-Themen, bei denen die App klar trennt: vor Ort bestätigt, nur online oder noch unklar.",
+      "color": "#475569",
+      "icon": "?"
+    }
+  ],
+  "halls": [
+    {
+      "id": "1",
+      "label": "Halle 1",
+      "shortLabel": "H1",
+      "area": "Business/Partner",
+      "description": "Keine Kernroute für den Publikumstag.",
+      "x": 7,
+      "y": 8,
+      "w": 13,
+      "h": 10,
+      "accent": "#cbd5e1"
+    },
+    {
+      "id": "2",
+      "label": "Halle 2",
+      "shortLabel": "H2",
+      "area": "Business Area",
+      "description": "Vorwiegend Fachpublikum und B2B.",
+      "x": 22,
+      "y": 8,
+      "w": 13,
+      "h": 10,
+      "accent": "#cbd5e1"
+    },
+    {
+      "id": "3",
+      "label": "Halle 3",
+      "shortLabel": "H3",
+      "area": "Business Area",
+      "description": "Vorwiegend Fachpublikum und B2B.",
+      "x": 37,
+      "y": 8,
+      "w": 13,
+      "h": 10,
+      "accent": "#cbd5e1"
+    },
+    {
+      "id": "4",
+      "label": "Halle 4",
+      "shortLabel": "H4",
+      "area": "Business Area",
+      "description": "Vorwiegend Fachpublikum und B2B.",
+      "x": 52,
+      "y": 8,
+      "w": 13,
+      "h": 10,
+      "accent": "#cbd5e1"
+    },
+    {
+      "id": "confex",
+      "label": "Confex",
+      "shortLabel": "Confex",
+      "area": "Congress & Conference",
+      "description": "Congress-Stages und Konferenzräume.",
+      "x": 72,
+      "y": 6,
+      "w": 20,
+      "h": 12,
+      "accent": "#9333ea"
+    },
+    {
+      "id": "5",
+      "label": "Halle 5",
+      "shortLabel": "H5",
+      "area": "Merch, Cosplay & Community",
+      "description": "Merchandise, Cosplay, Communities und gute Foto-Stopps.",
+      "x": 8,
+      "y": 27,
+      "w": 18,
+      "h": 15,
+      "accent": "#db2777"
+    },
+    {
+      "id": "6",
+      "label": "Halle 6",
+      "shortLabel": "H6",
+      "area": "Publisher & Action",
+      "description": "Ubisoft, Bandai Namco, Level Infinite, HoYoverse und GIANTS.",
+      "x": 29,
+      "y": 27,
+      "w": 18,
+      "h": 15,
+      "accent": "#2563eb"
+    },
+    {
+      "id": "7",
+      "label": "Halle 7",
+      "shortLabel": "H7",
+      "area": "Xbox, NetEase & SEGA",
+      "description": "Eine der wichtigsten Mainstream-Hallen – früh einplanen.",
+      "x": 50,
+      "y": 27,
+      "w": 18,
+      "h": 15,
+      "accent": "#22c55e"
+    },
+    {
+      "id": "8",
+      "label": "Halle 8",
+      "shortLabel": "H8",
+      "area": "Gaming & Hardware",
+      "description": "Weitere Gaming-, Hardware- und Aktionsflächen.",
+      "x": 71,
+      "y": 27,
+      "w": 18,
+      "h": 15,
+      "accent": "#06b6d4"
+    },
+    {
+      "id": "9",
+      "label": "Halle 9",
+      "shortLabel": "H9",
+      "area": "Nintendo, Capcom & Samsung",
+      "description": "Nintendo-/Switch-2-Schwerpunkt plus große Publikumsmagneten.",
+      "x": 20,
+      "y": 49,
+      "w": 21,
+      "h": 15,
+      "accent": "#e60012"
+    },
+    {
+      "id": "10",
+      "label": "Halle 10",
+      "shortLabel": "H10",
+      "area": "Indie, Retro & Education",
+      "description": "Indie Arena, Coffee Stain, Retro, Communities und ungewöhnliche Entdeckungen.",
+      "x": 45,
+      "y": 49,
+      "w": 25,
+      "h": 15,
+      "accent": "#7c3aed"
+    },
+    {
+      "id": "outdoor",
+      "label": "Außenbereich",
+      "shortLabel": "Outdoor",
+      "area": "Freiflächen",
+      "description": "Außenaktionen und Wege zwischen den Hallen.",
+      "x": 74,
+      "y": 50,
+      "w": 16,
+      "h": 13,
+      "accent": "#64748b"
+    }
+  ],
+  "routes": [
+    {
+      "id": "blockbuster",
+      "name": "Blockbuster kompakt",
+      "duration": "ca. 4–6 Std. plus Schlangen",
+      "color": "#2563eb",
+      "halls": [
+        "6",
+        "7",
+        "9"
+      ],
+      "entryIds": [
+        "bandai-namco",
+        "level-infinite",
+        "xbox",
+        "netease",
+        "nintendo",
+        "capcom"
+      ],
+      "tip": "Donnerstag: 7 → 9 → 6. Freitag: offene Lücken und NetEase-Special."
+    },
+    {
+      "id": "switch",
+      "name": "Nintendo & Switch 2",
+      "duration": "ca. 3–5 Std.",
+      "color": "#e60012",
+      "halls": [
+        "9",
+        "6"
+      ],
+      "entryIds": [
+        "nintendo",
+        "capcom",
+        "big-n-club-watch",
+        "bandai-namco"
+      ],
+      "tip": "Nintendo zuerst; Drittanbieter danach nach Wartezeit auswählen."
+    },
+    {
+      "id": "discover",
+      "name": "Indie, Retro & Community",
+      "duration": "ca. 3–4 Std.",
+      "color": "#7c3aed",
+      "halls": [
+        "10",
+        "5"
+      ],
+      "entryIds": [
+        "indie-arena",
+        "coffee-stain",
+        "scs-software",
+        "commodore-retro",
+        "hall5-community"
+      ],
+      "tip": "Halle 10 zum Spielen, Halle 5 zum Stöbern und Fotografieren."
+    }
+  ],
+  "entries": [
+    {
+      "id": "xbox",
+      "name": "Xbox: 25 Spiele, 140 Stationen",
+      "typ": "exhibitor",
+      "kategorien": [
+        "big-player",
+        "hardware"
+      ],
+      "halle": "7.1",
+      "stand": "A061–C060",
+      "kartenposition": {
+        "x": 58,
+        "y": 34
+      },
+      "beschreibung": "Der große Xbox-Publikumsstand bündelt Blockbuster, Hands-ons, Live-Demos und einen Jubiläumsbereich.",
+      "warumInteressant": "Hier liegen mit Gears of War: E-Day, Call of Duty: Modern Warfare 4, Fable, Forza Horizon 6, Halo: Campaign Evolved und Minecraft Dungeons II besonders viele Mainstream-Titel dicht beieinander.",
+      "bildUrl": "./assets/illustrations/xbox.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Microsoft Xbox",
+      "externeLinks": [
+        {
+          "label": "Xbox Wire: offizieller Gamescom-Überblick",
+          "url": "https://news.xbox.com/en-us/2026/07/28/xbox-gamescom-2026/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": true,
+      "andrang": "sehr hoch",
+      "andrangTipp": "Donnerstag direkt ab 10:00 Uhr. Call of Duty, Gears und Fable zuerst ansteuern.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [
+        "25 kommende Spiele und 140 Spielstationen laut Xbox.",
+        "Erstes öffentliches Kampagnen-Hands-on von Gears of War: E-Day.",
+        "Fable als Live-Demo-Theater; Call of Duty mit Core-6v6-Multiplayer.",
+        "Quiet Room, adaptive Controller, höhenverstellbare Stationen und weitere Accessibility-Angebote."
+      ],
+      "platforms": [
+        "Xbox",
+        "PC",
+        "Play Anywhere"
+      ],
+      "locationNote": "Das Ausstellerportal schreibt Halle 7.1, A061–C060; Xbox Wire nennt Booth A-0.61.",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 100
+    },
+    {
+      "id": "xbox-ikea",
+      "name": "Xbox × IKEA: Kollaborations-Watch",
+      "typ": "reality-check",
+      "kategorien": [
+        "big-player",
+        "hardware",
+        "reality"
+      ],
+      "halle": "7.1",
+      "stand": "bei Xbox – genauer Ort offen",
+      "kartenposition": {
+        "x": 61,
+        "y": 31
+      },
+      "beschreibung": "Die Möbel-Kollaboration ist angekündigt, aber ein eigener Slot, eine separate Fläche oder sichere Goodies sind noch nicht offiziell ausgewiesen.",
+      "warumInteressant": "Interessant als Fotomotiv und Design-Neuheit – aber kein Grund, eine feste Stunde zu blocken. Beim Xbox-Besuch gezielt nach Beschilderung fragen.",
+      "bildUrl": "./assets/illustrations/reality.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Microsoft Xbox",
+      "externeLinks": [
+        {
+          "label": "T3: Bericht zur Xbox-IKEA-Kollaboration",
+          "url": "https://www.t3.com/home-living/ikeas-next-big-collaboration-could-have-you-sitting-on-an-xbox-controller",
+          "type": "media"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "unklar",
+      "andrangTipp": "Mit dem Xbox-Besuch kombinieren; nicht separat anstellen, solange kein genauer Ablauf veröffentlicht ist.",
+      "bestaetigung": "teilweise",
+      "bestaetigungLabel": "Kollaboration bestätigt – Ablauf offen",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [
+        "Teaser zu controller-inspirierten Möbelstücken.",
+        "Kein verifizierter Gamescom-Zeitpunkt für ein Reveal.",
+        "Fotomöglichkeiten oder Give-aways sind derzeit nicht belastbar bestätigt."
+      ],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 70
+    },
+    {
+      "id": "nintendo",
+      "name": "Nintendo Switch 2 & tägliche Fun-Turniere",
+      "typ": "exhibitor",
+      "kategorien": [
+        "nintendo",
+        "big-player",
+        "goodies",
+        "community"
+      ],
+      "halle": "9.1",
+      "stand": "A10",
+      "kartenposition": {
+        "x": 30,
+        "y": 56
+      },
+      "beschreibung": "Großer Switch-2-Stand mit First-Party-Spielen, Partner-Titeln, Turnieren, Fotoaktionen und Account-Check-in.",
+      "warumInteressant": "Der klarste Nintendo-Stopp: Mario Kart World, Pokémon Pokopia, Splatoon Raiders, Star Fox, Nintendo Switch Sports Resort und zahlreiche Switch-2-Versionen von Drittanbietern.",
+      "bildUrl": "./assets/illustrations/nintendo.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Nintendo of Europe",
+      "externeLinks": [
+        {
+          "label": "Nintendo: offizielles Gamescom-Line-up 2026",
+          "url": "https://www.nintendo.com/de-de/News/2026/August/Nintendo-auf-der-gamescom-2026-3145761.html",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": true,
+      "goodieText": "Nintendo-Account-Check-in: Goodie solange Vorrat reicht + 100 Platinpunkte.",
+      "highlight": true,
+      "mustSee": true,
+      "andrang": "sehr hoch",
+      "andrangTipp": "Donnerstag früh. Erst Wunschspiel, dann Check-in und Fotoaktionen.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [
+        "Spielbar: u. a. Nintendo Switch Sports Resort, Splatoon Raiders, Star Fox und Pokémon Pokopia.",
+        "Partner-Titel u. a. Call of Duty: Modern Warfare 4, 007 First Light, EA Sports FC 27 und Minecraft Dungeons II.",
+        "Tägliche Fun-Turniere und mehrere digitale Foto-/Pikmin-Aktionen."
+      ],
+      "platforms": [
+        "Nintendo Switch 2",
+        "Nintendo Switch"
+      ],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 100
+    },
+    {
+      "id": "bandai-namco",
+      "name": "Bandai Namco: ACE COMBAT, Dragon Ball & Dawnwalker",
+      "typ": "exhibitor",
+      "kategorien": [
+        "big-player"
+      ],
+      "halle": "6.1",
+      "stand": "A20 / B021",
+      "kartenposition": {
+        "x": 36,
+        "y": 32
+      },
+      "beschreibung": "Vollständig spielbares Line-up mit mehreren öffentlichen Premieren.",
+      "warumInteressant": "ACE COMBAT 8 ist erstmals öffentlich spielbar, Dragon Ball Xenoverse 3 erstmals in Europa und The Blood of Dawnwalker bietet offene Weltpremiere-Sessions.",
+      "bildUrl": "./assets/illustrations/publisher.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Bandai Namco Entertainment",
+      "externeLinks": [
+        {
+          "label": "Bandai Namco: offizielles Gamescom-Line-up",
+          "url": "https://en.bandainamcoent.eu/events/news/bandai-namco-entertainment-details-fully-playable-gamescom-2026-line",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": true,
+      "andrang": "sehr hoch",
+      "andrangTipp": "Donnerstag früh, besonders für ACE COMBAT 8 oder Dawnwalker.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [
+        "ACE COMBAT 8: erstes öffentliches Hands-on.",
+        "Dragon Ball Xenoverse 3: erstmals in Europa spielbar.",
+        "The Blood of Dawnwalker: erste offene Spielsessions weltweit."
+      ],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 92
+    },
+    {
+      "id": "ubisoft",
+      "name": "Ubisoft – großer Entertainment-Stand",
+      "typ": "exhibitor",
+      "kategorien": [
+        "big-player"
+      ],
+      "halle": "6.1",
+      "stand": "C011 / B010 + B020",
+      "kartenposition": {
+        "x": 33,
+        "y": 36
+      },
+      "beschreibung": "Ubisoft ist mit einer großen bestätigten Publikumsfläche in Halle 6 vertreten.",
+      "warumInteressant": "Ein sinnvoller Mainstream-Stopp für aktuelle Ubisoft-Marken. Das endgültige Vor-Ort-Line-up war bei der Quellenprüfung noch nicht als belastbare Gesamtliste veröffentlicht – die App erfindet daher keine Titel.",
+      "bildUrl": "./assets/illustrations/publisher.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Ubisoft GmbH",
+      "externeLinks": [
+        {
+          "label": "Ubisoft News – aktuelle offizielle Meldungen",
+          "url": "https://news.ubisoft.com/de-de/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "hoch",
+      "andrangTipp": "Donnerstag vormittags oder Freitag zur Öffnung; vor Ort zuerst Line-up-Tafel und Warteschlangen prüfen.",
+      "bestaetigung": "stand-bestaetigt",
+      "bestaetigungLabel": "Stand bestätigt – Line-up nachsehen",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Halle und Stände im aktuellen Gamescom-Ausstellerportal geprüft; vollständiges Publikums-Line-up noch nicht belastbar zusammengefasst.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 86
+    },
+    {
+      "id": "level-infinite",
+      "name": "Level Infinite: CONTROL, Dune & Hunt",
+      "typ": "exhibitor",
+      "kategorien": [
+        "big-player",
+        "goodies"
+      ],
+      "halle": "6.1",
+      "stand": "C071–A070",
+      "kartenposition": {
+        "x": 42,
+        "y": 36
+      },
+      "beschreibung": "Drei starke Hands-on- und Erlebnisbereiche plus Fotoflächen und Gewinnaktionen.",
+      "warumInteressant": "CONTROL Resonant ist erstmals öffentlich spielbar; Dune: Awakening bietet die erste öffentliche Konsolendemo. Dazu kommen Hunt-Aktivitäten und ein Glücksrad.",
+      "bildUrl": "./assets/illustrations/publisher.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Level Infinite",
+      "externeLinks": [
+        {
+          "label": "Level Infinite: offizielles Gamescom-Line-up",
+          "url": "https://www.levelinfinite.com/news/level-infinite-gamescom-2026-lineup/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": true,
+      "goodieText": "Glücksrad mit Preisen; Hunt nennt exklusive Ingame-Items und Merch-Aktionen.",
+      "highlight": true,
+      "mustSee": true,
+      "andrang": "sehr hoch",
+      "andrangTipp": "Donnerstag früh für CONTROL oder Dune; Gewinnaktionen später erneut prüfen.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [
+        "CONTROL Resonant: erstes öffentliches Hands-on.",
+        "Dune: Awakening: erste öffentliche Konsolendemo plus Themen-Fotofläche.",
+        "Hunt: Showdown 1896: Aktivitäten, Foto-/Cosplay-Motiv und Merch-/Ingame-Aktionen."
+      ],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 91
+    },
+    {
+      "id": "hoyoverse",
+      "name": "HoYoverse Community-Stand",
+      "typ": "exhibitor",
+      "kategorien": [
+        "big-player",
+        "community"
+      ],
+      "halle": "6.1",
+      "stand": "B030–C031",
+      "kartenposition": {
+        "x": 38,
+        "y": 38
+      },
+      "beschreibung": "Große bestätigte HoYoverse-Publikumsfläche in Halle 6.",
+      "warumInteressant": "Ein Magnet für Genshin-, Honkai- und weitere HoYoverse-Communities. Konkrete Tagesaktionen und Goodies werden nur vor Ort beziehungsweise über offizielle Kanäle als bestätigt behandelt.",
+      "bildUrl": "./assets/illustrations/community.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "HoYoverse",
+      "externeLinks": [
+        {
+          "label": "HoYoverse – offizielle Website",
+          "url": "https://www.hoyoverse.com/en-us/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "sehr hoch",
+      "andrangTipp": "Do früh oder gezielt zu einem veröffentlichten Bühnen-/Cosplay-Slot. Ohne konkreten Slot reicht ein Rundgang am Freitag.",
+      "bestaetigung": "stand-bestaetigt",
+      "bestaetigungLabel": "Stand bestätigt – Aktionen offen",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 84
+    },
+    {
+      "id": "giants",
+      "name": "GIANTS Software: Farming Simulator & Project Motor Racing",
+      "typ": "exhibitor",
+      "kategorien": [
+        "big-player",
+        "community",
+        "goodies",
+        "nintendo"
+      ],
+      "halle": "6.1",
+      "stand": "B061",
+      "kartenposition": {
+        "x": 44,
+        "y": 31
+      },
+      "beschreibung": "Farming Simulator 25, die Switch-2-Signature-Edition, Farming Simulator 26 und Project Motor Racing am Publikumsstand.",
+      "warumInteressant": "Ein unkomplizierter, familienfreundlicher Mainstream-Stopp mit spielbaren Simulationen, Bühnenprogramm und Give-aways – gut als Kontrast zu den größten Shooter-Schlangen.",
+      "bildUrl": "./assets/illustrations/publisher.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "GIANTS Software Entertainment GmbH",
+      "externeLinks": [
+        {
+          "label": "GIANTS – offizieller Gamescom-Überblick 2026",
+          "url": "https://www.giants-software.com/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": true,
+      "goodieText": "Give-aways beim Bühnenprogramm, solange der Vorrat reicht.",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "hoch",
+      "andrangTipp": "Freitag später reicht meist eher als bei Xbox/Nintendo; Bühnenaktionen können kurzfristig Spitzen erzeugen.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand, Line-up, Bühnenprogramm und Give-away-Hinweis am 23.08.2026 auf der offiziellen GIANTS-Seite geprüft.",
+      "details": [
+        "Bestätigt sind Farming Simulator 25 mit Beans & Alpacas, Farming Simulator: Signature Edition für Nintendo Switch 2, Farming Simulator 26 sowie Project Motor Racing.",
+        "Zum Bühnenprogramm gehören unter anderem Bale Race, Project-Motor-Racing-Hotlaps und Give-aways."
+      ],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 72
+    },
+    {
+      "id": "netease",
+      "name": "NetEase: Marvel Rivals, Where Winds Meet & Sea of Remnants",
+      "typ": "exhibitor",
+      "kategorien": [
+        "big-player",
+        "goodies",
+        "community",
+        "signing"
+      ],
+      "halle": "7.1",
+      "stand": "B050 + A051",
+      "kartenposition": {
+        "x": 63,
+        "y": 37
+      },
+      "beschreibung": "Spielstationen, Fotomotive, Live-Performances und mehrere konkret angekündigte Belohnungen.",
+      "warumInteressant": "Einer der besten belegten Goodie-Stopps: kostenlose Marvel-Rivals-Badges, Gamescom-Keychains und über Missionen freischaltbares Sea-of-Remnants-Merch.",
+      "bildUrl": "./assets/illustrations/publisher.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "UK NetEase Interactive Entertainment Ltd",
+      "externeLinks": [
+        {
+          "label": "NetEase: offizielles Gamescom-Programm",
+          "url": "https://www.neteasegames.com/news/20260811/37000_1310671.html",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": true,
+      "goodieText": "Badges, Schlüsselanhänger und mehrere missionsbasierte Merch-Rewards.",
+      "highlight": true,
+      "mustSee": true,
+      "andrang": "sehr hoch",
+      "andrangTipp": "Freitag priorisieren: Für den 28.08. sind besondere Gäste, Performances und Fan-Interaktionen angekündigt.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [
+        "Marvel Rivals und Where Winds Meet: Halle 7.1, B-050.",
+        "Sea of Remnants: Halle 7.1, A-051.",
+        "Freitag: besondere Gäste, Live-Performance und Fan-Interaktion angekündigt."
+      ],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 94
+    },
+    {
+      "id": "sega",
+      "name": "SEGA Europe",
+      "typ": "exhibitor",
+      "kategorien": [
+        "big-player",
+        "retro"
+      ],
+      "halle": "7.1",
+      "stand": "A041–B040 + A031",
+      "kartenposition": {
+        "x": 54,
+        "y": 38
+      },
+      "beschreibung": "Große bestätigte SEGA-Publikumsfläche mit zusätzlichem Retro-Reiz durch die Traditionsmarken.",
+      "warumInteressant": "Für eine breite Route interessant: SEGA verbindet aktuelle Titel mit Sonic-, Like-a-Dragon-, Persona- und Arcade-Nostalgie. Ein belastbares vollständiges 2026-Line-up lag beim Check noch nicht vor.",
+      "bildUrl": "./assets/illustrations/publisher.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "SEGA Europe",
+      "externeLinks": [
+        {
+          "label": "SEGA Corporation – offizielle Website",
+          "url": "https://www.sega.co.jp/en/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "hoch",
+      "andrangTipp": "Donnerstag Vormittag für einzelne Demos; für einen Rundgang reicht häufig Freitag später.",
+      "bestaetigung": "stand-bestaetigt",
+      "bestaetigungLabel": "Stand bestätigt – Line-up vor Ort prüfen",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand im aktuellen Gamescom-Verzeichnis; offizielle SEGA-Unternehmensseite am 23.08.2026 erreichbar. Vollständiges Vor-Ort-Line-up weiterhin nicht behauptet.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 80
+    },
+    {
+      "id": "capcom",
+      "name": "Capcom – großer Stand in Halle 9",
+      "typ": "exhibitor",
+      "kategorien": [
+        "big-player",
+        "nintendo"
+      ],
+      "halle": "9.1",
+      "stand": "A070–C079",
+      "kartenposition": {
+        "x": 36,
+        "y": 58
+      },
+      "beschreibung": "Capcom belegt eine große bestätigte Entertainment-Fläche in Halle 9.",
+      "warumInteressant": "Für Resident-Evil-, Monster-Hunter-, Street-Fighter- und Switch-2-Fans ein naheliegender Mainstream-Stopp. Konkrete spielbare Titel werden bewusst erst als bestätigt markiert, wenn Capcom sie offiziell bündelt.",
+      "bildUrl": "./assets/illustrations/publisher.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Capcom Entertainment Germany GmbH",
+      "externeLinks": [
+        {
+          "label": "Capcom – offizielle Website",
+          "url": "https://www.capcom.com/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": true,
+      "andrang": "sehr hoch",
+      "andrangTipp": "Donnerstag früh oder direkt nach Nintendo. Bei langen Schlangen Freitag neu bewerten.",
+      "bestaetigung": "stand-bestaetigt",
+      "bestaetigungLabel": "Stand bestätigt – Line-up vor Ort prüfen",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand im aktuellen Gamescom-Verzeichnis; offizielle Capcom-Seite am 23.08.2026 erreichbar. Vollständiges Vor-Ort-Line-up weiterhin nicht behauptet.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 88
+    },
+    {
+      "id": "samsung",
+      "name": "Samsung Gaming & Display",
+      "typ": "exhibitor",
+      "kategorien": [
+        "hardware",
+        "big-player"
+      ],
+      "halle": "9.1",
+      "stand": "B010–C011 + B020–C029",
+      "kartenposition": {
+        "x": 24,
+        "y": 53
+      },
+      "beschreibung": "Große Hardware- und Gaming-Fläche direkt in der Nintendo-Halle.",
+      "warumInteressant": "Guter Zwischenstopp für Monitore, Display-Technik, Cloud-/Console-Setups und meist schnellere Hands-ons als bei den großen Spielepremieren.",
+      "bildUrl": "./assets/illustrations/hardware.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Samsung Electronics Co., Ltd.",
+      "externeLinks": [
+        {
+          "label": "Samsung Gaming – offizielle deutsche Seite",
+          "url": "https://www.samsung.com/de/gaming/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "mittel",
+      "andrangTipp": "Freitag später reicht meist; als Puffer zwischen Nintendo und Capcom nutzen.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 65
+    },
+    {
+      "id": "indie-arena",
+      "name": "Indie Arena Booth",
+      "typ": "area",
+      "kategorien": [
+        "indie",
+        "community"
+      ],
+      "halle": "10.2",
+      "stand": "Indie Area – genaue Position im Tagesplan",
+      "kartenposition": {
+        "x": 59,
+        "y": 56
+      },
+      "beschreibung": "Die weltweit größte gemeinschaftliche Indie-Entwicklerfläche mit vielen kurzen, ungewöhnlichen Demos.",
+      "warumInteressant": "Ideal zum Entdecken: Statt einer einzigen langen Schlange bekommst du viele kompakte Spiele, direkte Gespräche mit Entwickler:innen und häufig kleinere Community-Aktionen.",
+      "bildUrl": "./assets/illustrations/indie.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/hall-plan/",
+      "gamescomLinkLabel": "Offizieller Gamescom-Hallenplan 2026",
+      "officialSearchTerm": "Indie Area / Halle 10",
+      "externeLinks": [
+        {
+          "label": "Indie Arena Booth – Gamescom 2026 Presskit",
+          "url": "https://home.indiearenabooth.de/gamescom2026",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": true,
+      "andrang": "hoch",
+      "andrangTipp": "Früh für gehypte Demos; zum entspannten Stöbern ist Freitag später oft gut.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [
+        "Der Veranstalter nennt 2.037,5 m² Gemeinschaftsfläche.",
+        "Viele Demos sind kurz – gute Ausbeute pro Stunde.",
+        "Exakte Standpositionen einzelner Spiele können sich kurzfristig ändern."
+      ],
+      "platforms": [],
+      "locationNote": "Als Bereichsmarker in Halle 10.2 eingezeichnet; vor Ort den aktuellen Floorplan prüfen.",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 90
+    },
+    {
+      "id": "coffee-stain",
+      "name": "Coffee Stain Publishing",
+      "typ": "exhibitor",
+      "kategorien": [
+        "indie",
+        "big-player"
+      ],
+      "halle": "10.1",
+      "stand": "A062–B063",
+      "kartenposition": {
+        "x": 50,
+        "y": 54
+      },
+      "beschreibung": "Bekannter Publisher-/Studioverbund mit zugänglichen Koop-, Aufbau- und Survival-Spielen.",
+      "warumInteressant": "Ein guter Brückenschlag zwischen Indie und Mainstream – besonders für Satisfactory-, Valheim- und Deep-Rock-Galactic-Fans.",
+      "bildUrl": "./assets/illustrations/indie.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Coffee Stain Publishing (CSP)",
+      "externeLinks": [
+        {
+          "label": "Coffee Stain – offizielle Website",
+          "url": "https://coffeestain.com/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "hoch",
+      "andrangTipp": "Freitag später oft besser als die großen Publisher-Hallen; bei neuen Demos trotzdem Wartezeit einplanen.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 76
+    },
+    {
+      "id": "scs-software",
+      "name": "SCS Software / Truck Simulator",
+      "typ": "exhibitor",
+      "kategorien": [
+        "indie",
+        "community"
+      ],
+      "halle": "10.1",
+      "stand": "B022–C023",
+      "kartenposition": {
+        "x": 47,
+        "y": 59
+      },
+      "beschreibung": "Bestätigter Publikumsstand des Studios hinter Euro Truck Simulator und American Truck Simulator.",
+      "warumInteressant": "Breit verständlicher Simulator-Stopp, oft mit starker Community und Hardware-Setup – gut für eine entspanntere Stunde in Halle 10.",
+      "bildUrl": "./assets/illustrations/hardware.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "SCS Software s.r.o.",
+      "externeLinks": [
+        {
+          "label": "SCS Software – offizielle Website",
+          "url": "https://www.scssoft.com/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": false,
+      "mustSee": false,
+      "andrang": "mittel",
+      "andrangTipp": "Freitag später reicht in der Regel; Community-Aktionen können kurzfristig voller werden.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 60
+    },
+    {
+      "id": "commodore-retro",
+      "name": "Commodore & Werksmuseum 2.0",
+      "typ": "area",
+      "kategorien": [
+        "retro",
+        "community"
+      ],
+      "halle": "10",
+      "stand": "C059–B050 (10.1) + A020 (10.2)",
+      "kartenposition": {
+        "x": 65,
+        "y": 60
+      },
+      "beschreibung": "Zwei Retro-Stopps: aktuelle Commodore-Community plus ein Werksmuseum mit Technik- und Produktionsgeschichte.",
+      "warumInteressant": "Hier bekommst du echte Hardware-Nostalgie statt nur Retro-inspirierter Indies: Heimcomputer, Amiga-/Commodore-Geschichte und Sammler:innenwissen.",
+      "bildUrl": "./assets/illustrations/retro.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Commodore International Corporation / Commodore Werksmuseum 2.0",
+      "externeLinks": [
+        {
+          "label": "Commodore – offizielle Website",
+          "url": "https://commodore.net/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": false,
+      "mustSee": false,
+      "andrang": "mittel",
+      "andrangTipp": "Freitag später reicht; für Gespräche mit Sammler:innen nicht zu knapp planen.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [
+        "Commodore International: Halle 10.1, C059–B050.",
+        "Commodore Werksmuseum 2.0: Halle 10.2, A020."
+      ],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 68
+    },
+    {
+      "id": "hall5-community",
+      "name": "Halle 5: Merch, Cosplay & Community",
+      "typ": "area",
+      "kategorien": [
+        "community",
+        "goodies"
+      ],
+      "halle": "5",
+      "stand": "mehrere Flächen",
+      "kartenposition": {
+        "x": 17,
+        "y": 34
+      },
+      "beschreibung": "Die beste Halle für Merchandise, Cosplay, spontane Community-Entdeckungen und Fotomotive.",
+      "warumInteressant": "Auch ohne festen Kaufplan lohnt ein Rundgang. Kleine Händler und Community-Stände haben eher Sticker, Karten oder Mini-Aktionen – kostenlose Give-aways sind aber nie garantiert.",
+      "bildUrl": "./assets/illustrations/community.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/hall-plan/",
+      "gamescomLinkLabel": "Offizieller Gamescom-Hallenplan 2026",
+      "officialSearchTerm": "Halle 5",
+      "externeLinks": [
+        {
+          "label": "CosBase – deutsche Cosplay-Community",
+          "url": "https://www.cosbase.de/",
+          "type": "community"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": true,
+      "goodieText": "Chance auf kleinere Sticker/Karten/Aktionen; nicht als garantiertes Merch einplanen.",
+      "highlight": false,
+      "mustSee": false,
+      "andrang": "hoch",
+      "andrangTipp": "Freitag später zum Stöbern; für limitierte Creator-Produkte Donnerstag früh.",
+      "bestaetigung": "bereich",
+      "bestaetigungLabel": "Bereichs-Guide",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 62
+    },
+    {
+      "id": "big-n-club-watch",
+      "name": "BIG-N-Club: Community-Watch",
+      "typ": "reality-check",
+      "kategorien": [
+        "nintendo",
+        "community",
+        "reality"
+      ],
+      "halle": "9.1",
+      "stand": "kein bestätigter eigener Stand",
+      "kartenposition": {
+        "x": 27,
+        "y": 60
+      },
+      "beschreibung": "Der deutsche inoffizielle Nintendo-Fanclub ist für Community-Fans relevant, im aktuellen Gamescom-Ausstellerverzeichnis ist aber kein belastbarer eigener Stand oder Signing-Termin bestätigt.",
+      "warumInteressant": "Speichere diesen Watch-Eintrag und prüfe kurz vor dem Besuch die Club-Kanäle. Treffpunkte können informell rund um Nintendo entstehen, sollten aber nicht als offizieller Programmpunkt dargestellt werden.",
+      "bildUrl": "./assets/illustrations/community.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "BIG-N-Club / Nintendo",
+      "externeLinks": [
+        {
+          "label": "Nintendo – offizieller Gamescom-Auftritt 2026",
+          "url": "https://www.nintendo.com/de-de/News/2026/August/Nintendo-auf-der-gamescom-2026-3145761.html",
+          "type": "official"
+        },
+        {
+          "label": "Instagram-Reel als thematischer Ausgangspunkt",
+          "url": "https://www.instagram.com/reel/DcTqcSICdwc/",
+          "type": "community"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": false,
+      "mustSee": false,
+      "andrang": "unklar",
+      "andrangTipp": "Keinen festen Slot blocken. Beim Nintendo-Besuch und am Vorabend Club-Kanäle prüfen.",
+      "bestaetigung": "nicht-bestaetigt",
+      "bestaetigungLabel": "Noch kein offizieller Stand bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Aktuelles Gamescom-Ausstellerverzeichnis geprüft: kein belastbarer eigener BIG-N-Club-Stand gefunden. Das verlinkte Instagram-Reel stammt aus der Nutzerangabe und ist kein Nachweis für einen offiziellen Termin.",
+      "details": [
+        "Der Nintendo-Stand ist der sinnvollste Ort, um spontan nach Community-Treffpunkten oder Fanaktionen zu fragen.",
+        "Das Instagram-Reel kann eine Anmeldung bei Instagram erfordern und wird ausdrücklich nicht als offizielle Gamescom-Quelle gewertet."
+      ],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 58
+    },
+    {
+      "id": "playstation-route",
+      "name": "PlayStation-Route ohne eigenen Megastand",
+      "typ": "guide",
+      "kategorien": [
+        "big-player",
+        "reality"
+      ],
+      "halle": "",
+      "stand": "Route über Drittanbieter",
+      "kartenposition": null,
+      "beschreibung": "Im aktuellen Ausstellerverzeichnis ist kein eigenständiger großer Sony-/PlayStation-Publikumsstand belastbar bestätigt.",
+      "warumInteressant": "PS5-Fans finden trotzdem viel: Bandai Namco, Capcom, Ubisoft, Level Infinite, HoYoverse und weitere Multiplattform-Publisher bilden eine sinnvolle PlayStation-Route.",
+      "bildUrl": "./assets/illustrations/reality.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Sony / PlayStation",
+      "externeLinks": [
+        {
+          "label": "PlayStation Blog Deutschland",
+          "url": "https://blog.de.playstation.com/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27",
+        "2026-08-28"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "route",
+      "andrangTipp": "Keine separate Warteschlange einplanen; stattdessen Halle 6 → 9 als PS5-Publisher-Route nutzen.",
+      "bestaetigung": "nicht-bestaetigt",
+      "bestaetigungLabel": "Kein eigener Stand bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Abwesenheit ist eine Verzeichnis-Inferenz, kein Beweis dafür, dass keinerlei PlayStation-Marketing auf Partnerständen stattfindet.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": null,
+      "endzeit": null,
+      "stage": "",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": false,
+      "priority": 75
+    },
+    {
+      "id": "xbox-broadcast",
+      "name": "Xbox Gamescom Broadcast 2",
+      "typ": "show",
+      "kategorien": [
+        "big-player",
+        "talk"
+      ],
+      "halle": "7.1",
+      "stand": "Xbox-Stand / Stream",
+      "kartenposition": {
+        "x": 57,
+        "y": 31
+      },
+      "beschreibung": "Zweiter Xbox-Livestream mit Gameplay, Interviews, News und Gästen.",
+      "warumInteressant": "Nur dann live verfolgen, wenn dich die Show stärker interessiert als die parallel laufende Spielwissenschaft. Sonst später als Aufzeichnung ansehen und die Messezeit für Demos nutzen.",
+      "bildUrl": "./assets/illustrations/talk.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Ausstellerverzeichnis",
+      "officialSearchTerm": "Microsoft Xbox",
+      "externeLinks": [
+        {
+          "label": "Xbox Wire: Termin und Standprogramm",
+          "url": "https://news.xbox.com/en-us/2026/07/28/xbox-gamescom-2026/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "hoch",
+      "andrangTipp": "Vor Ort nur bei echter Show-Priorität; der Stream bindet zur besten Messezeit.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": "2026-08-27T16:00:00+02:00",
+      "endzeit": "2026-08-27T17:00:00+02:00",
+      "stage": "Xbox-Stand / online",
+      "speaker": [],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 79
+    },
+    {
+      "id": "spielwissenschaft-panel",
+      "name": "Potenziale und Herausforderungen der Spielwissenschaft in Deutschland",
+      "typ": "talk",
+      "kategorien": [
+        "talk"
+      ],
+      "halle": "confex",
+      "stand": "Stage D",
+      "kartenposition": {
+        "x": 82,
+        "y": 12
+      },
+      "beschreibung": "Panel zur institutionellen Entwicklung der Spielwissenschaft in Deutschland.",
+      "warumInteressant": "Kompakter wissenschafts- und politiknaher Blick auf ein Feld zwischen Forschung, Förderung und Games-Kultur.",
+      "bildUrl": "./assets/illustrations/talk.svg",
+      "gamescomLink": "https://congress.gamescom.global/de/programm/",
+      "gamescomLinkLabel": "Offizielles Gamescom-Congress-Programm",
+      "officialSearchTerm": "Potenziale und Herausforderungen der Spielwissenschaft in Deutschland",
+      "externeLinks": [
+        {
+          "label": "Prof. Dr. Jens Junge – offizielle SRH-Profilseite",
+          "url": "https://www.srh-university.de/de/hochschule/hochschulteam/junge-jens/",
+          "type": "official"
+        }
+      ],
+      "tage": [
+        "2026-08-27"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": false,
+      "mustSee": false,
+      "andrang": "mittel",
+      "andrangTipp": "10–15 Minuten vorher reichen; direkt danach wieder in die Entertainment-Hallen.",
+      "bestaetigung": "bestaetigt",
+      "bestaetigungLabel": "Bestätigt",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Termin und Besetzung aus der Nutzerangabe; offizielles Congress-Programm und die SRH-Profilseite von Jens Junge am 23.08.2026 erreichbar.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": "2026-08-27T16:00:00+02:00",
+      "endzeit": "2026-08-27T17:00:00+02:00",
+      "stage": "gamescom congress · Stage D",
+      "speaker": [
+        "Sebastian Möring (Moderation)",
+        "Dr. Effrosyni Chelioti",
+        "Dr. Andrea Lübcke MdB",
+        "Jun.-Prof. Dr. Melanie Fritsch",
+        "Prof. Dr. Jens Junge"
+      ],
+      "remote": false,
+      "mapVisible": true,
+      "priority": 70
+    },
+    {
+      "id": "awesome-indies",
+      "name": "Gamescom Awesome Indies",
+      "typ": "show",
+      "kategorien": [
+        "indie",
+        "talk"
+      ],
+      "halle": "",
+      "stand": "online / nach Messeschluss",
+      "kartenposition": null,
+      "beschreibung": "Digitale Indie-Show mit Trailern, Interviews und neuen Spielen.",
+      "warumInteressant": "Passt thematisch zur Indie Arena, beginnt aber genau zum Messeschluss. Ideal für den Rückweg oder später im Hotel – kein Vor-Ort-Must-see.",
+      "bildUrl": "./assets/illustrations/talk.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/hall-plan/",
+      "gamescomLinkLabel": "Offizieller Gamescom-Hallenplan (kein Vor-Ort-Stand)",
+      "officialSearchTerm": "Indie Area",
+      "externeLinks": [
+        {
+          "label": "GamesRadar: Gamescom-Showplan 2026",
+          "url": "https://www.gamesradar.com/games/events-conferences/gamescom-2026-schedule/",
+          "type": "media"
+        }
+      ],
+      "tage": [
+        "2026-08-27"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": false,
+      "mustSee": false,
+      "andrang": "online",
+      "andrangTipp": "Nicht früher aus der Halle gehen; ab 20:00 unterwegs oder später als Aufzeichnung.",
+      "bestaetigung": "parallel",
+      "bestaetigungLabel": "Online / parallel",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Stand und Quelle am 23.08.2026 geprüft.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": "2026-08-27T20:00:00+02:00",
+      "endzeit": "2026-08-27T21:15:00+02:00",
+      "stage": "online",
+      "speaker": [],
+      "remote": true,
+      "mapVisible": false,
+      "priority": 45
+    },
+    {
+      "id": "gta6-netflix",
+      "name": "GTA VI: An Extended Look",
+      "typ": "show",
+      "kategorien": [
+        "big-player",
+        "reality",
+        "talk"
+      ],
+      "halle": "",
+      "stand": "Netflix / nicht auf dem Messegelände",
+      "kartenposition": null,
+      "beschreibung": "Das große GTA-VI-Special läuft am Donnerstagabend um 21:00 Uhr – medial parallel zur Gamescom, nicht als bestätigte spielbare Vor-Ort-Demo.",
+      "warumInteressant": "Ein Hype-Termin für nach dem Messetag. In der App steht er bewusst getrennt von Messehallen-Highlights, damit du keine vermeintliche GTA-Schlange suchst.",
+      "bildUrl": "./assets/illustrations/reality.svg",
+      "gamescomLink": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/hall-plan/",
+      "gamescomLinkLabel": "Offizieller Gamescom-Hallenplan (kein GTA-Stand bestätigt)",
+      "officialSearchTerm": "Rockstar Games / Take-Two",
+      "externeLinks": [
+        {
+          "label": "The Verge: Termin des GTA-VI-Specials",
+          "url": "https://www.theverge.com/entertainment/976073/gta-6-trailer-3-date-time-netflix-youtube",
+          "type": "media"
+        }
+      ],
+      "tage": [
+        "2026-08-27"
+      ],
+      "goodie": false,
+      "goodieText": "",
+      "highlight": true,
+      "mustSee": false,
+      "andrang": "online",
+      "andrangTipp": "Nach Messeschluss ansehen; keine Vor-Ort-Zeit reservieren.",
+      "bestaetigung": "online",
+      "bestaetigungLabel": "Bestätigt – nur online/parallel",
+      "sourceChecked": "2026-08-23",
+      "sourceNote": "Zeit 21:00 Uhr MESZ; keine spielbare Gamescom-Demo oder eigener GTA-VI-Stand belastbar bestätigt.",
+      "details": [],
+      "platforms": [],
+      "locationNote": "",
+      "startzeit": "2026-08-27T21:00:00+02:00",
+      "endzeit": "2026-08-27T21:30:00+02:00",
+      "stage": "Netflix – online",
+      "speaker": [],
+      "remote": true,
+      "mapVisible": false,
+      "priority": 78
+    }
+  ]
+}

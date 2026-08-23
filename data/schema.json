@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Gamescom Guide Data",
+  "type": "object",
+  "required": [
+    "meta",
+    "categories",
+    "halls",
+    "entries"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object"
+    },
+    "categories": {
+      "type": "array"
+    },
+    "halls": {
+      "type": "array"
+    },
+    "routes": {
+      "type": "array"
+    },
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "typ",
+          "kategorien",
+          "beschreibung",
+          "gamescomLink",
+          "externeLinks",
+          "tage",
+          "goodie",
+          "highlight",
+          "sourceChecked"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "gamescomLink": {
+            "type": "string",
+            "format": "uri"
+          },
+          "externeLinks": {
+            "type": "array",
+            "minItems": 1
+          }
+        }
+      }
+    }
+  }
+}

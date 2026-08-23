@@ -1,0 +1,234 @@
+{
+  "checkedAt": "2026-08-23",
+  "method": "URLs einzeln mit aktuellem Webabruf geprüft; Inhalte zusätzlich gegen die Aussagen im Datenbestand abgeglichen.",
+  "summary": {
+    "uniqueUrls": 25,
+    "verifiedOrReachable": 24,
+    "optionalUserSupplied": 1,
+    "known404LinksRemaining": 0
+  },
+  "links": [
+    {
+      "url": "https://blog.de.playstation.com/",
+      "status": "verified-canonical-homepage",
+      "note": "Offizieller deutschsprachiger PlayStation-Blog erreichbar; kein eigener Sony-Megastand daraus behauptet.",
+      "usedBy": [
+        "playstation-route"
+      ]
+    },
+    {
+      "url": "https://coffeestain.com/",
+      "status": "verified-canonical-homepage",
+      "note": "Offizielle Coffee-Stain-Seite mit aktuellem Spieleportfolio erreichbar.",
+      "usedBy": [
+        "coffee-stain"
+      ]
+    },
+    {
+      "url": "https://commodore.net/",
+      "status": "verified-canonical-homepage",
+      "note": "Aktuelle offizielle Commodore-Seite erreichbar.",
+      "usedBy": [
+        "commodore-retro"
+      ]
+    },
+    {
+      "url": "https://congress.gamescom.global/de/programm/",
+      "status": "verified-current-portal",
+      "note": "Aktuelles offizielles Congress-Programm 2026 erreichbar; Agenda kann bis zur Messe aktualisiert werden.",
+      "usedBy": [
+        "spielwissenschaft-panel"
+      ]
+    },
+    {
+      "url": "https://en.bandainamcoent.eu/events/news/bandai-namco-entertainment-details-fully-playable-gamescom-2026-line",
+      "status": "verified-current-content",
+      "note": "Offizieller Bandai-Namco-Gamescom-2026-Beitrag erreichbar.",
+      "usedBy": [
+        "bandai-namco"
+      ]
+    },
+    {
+      "url": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/hall-plan/",
+      "status": "verified-current-portal",
+      "note": "Aktueller offizieller Hallenplan 2026 erreichbar.",
+      "usedBy": [
+        "awesome-indies",
+        "gta6-netflix",
+        "hall5-community",
+        "indie-arena"
+      ]
+    },
+    {
+      "url": "https://exhibitors.gamescom.global/en/gamescom-exhibitors/list-of-exhibitors/",
+      "status": "verified-current-portal",
+      "note": "Aktuelles offizielles Aussteller- und Produktverzeichnis 2026; Suchfeld und Hallenangaben erreichbar.",
+      "usedBy": [
+        "bandai-namco",
+        "big-n-club-watch",
+        "capcom",
+        "coffee-stain",
+        "commodore-retro",
+        "giants",
+        "hoyoverse",
+        "level-infinite",
+        "netease",
+        "nintendo",
+        "playstation-route",
+        "samsung",
+        "scs-software",
+        "sega",
+        "ubisoft",
+        "xbox",
+        "xbox-broadcast",
+        "xbox-ikea"
+      ]
+    },
+    {
+      "url": "https://home.indiearenabooth.de/gamescom2026",
+      "status": "verified-current-content",
+      "note": "Aktuelle offizielle Indie-Arena-Booth-Seite für Gamescom 2026 erreichbar.",
+      "usedBy": [
+        "indie-arena"
+      ]
+    },
+    {
+      "url": "https://news.ubisoft.com/de-de/",
+      "status": "verified-canonical-homepage",
+      "note": "Offizielle Ubisoft-Newsseite erreichbar; keine unbestätigte Titelliste in der App.",
+      "usedBy": [
+        "ubisoft"
+      ]
+    },
+    {
+      "url": "https://news.xbox.com/en-us/2026/07/28/xbox-gamescom-2026/",
+      "status": "verified-current-content",
+      "note": "Offizieller Xbox-Gamescom-2026-Beitrag erreichbar.",
+      "usedBy": [
+        "xbox",
+        "xbox-broadcast"
+      ]
+    },
+    {
+      "url": "https://www.capcom.com/",
+      "status": "verified-canonical-homepage",
+      "note": "Offizielle Capcom-Seite erreichbar; keine unbestätigte Gamescom-Titelliste.",
+      "usedBy": [
+        "capcom"
+      ]
+    },
+    {
+      "url": "https://www.cosbase.de/",
+      "status": "verified-canonical-homepage",
+      "note": "CosBase-Communityseite erreichbar; offizieller Gamescom-Eintrag zusätzlich über das Ausstellerportal.",
+      "usedBy": [
+        "hall5-community"
+      ]
+    },
+    {
+      "url": "https://www.gamesradar.com/games/events-conferences/gamescom-2026-schedule/",
+      "status": "verified-current-content",
+      "note": "Aktueller Gamescom-2026-Showplan des Fachmediums erreichbar.",
+      "usedBy": [
+        "awesome-indies"
+      ]
+    },
+    {
+      "url": "https://www.giants-software.com/",
+      "status": "verified-current-content",
+      "note": "Offizielle Startseite enthält den aktuellen Beitrag GIANTS at gamescom 2026 samt Line-up, Bühne und Give-aways.",
+      "usedBy": [
+        "giants"
+      ]
+    },
+    {
+      "url": "https://www.hoyoverse.com/en-us/",
+      "status": "reachable-js-heavy",
+      "note": "Offizielle HoYoverse-Seite erreichbar, aber stark JavaScript-basiert; App behauptet nur den bestätigten Stand, keine unbestätigten Aktionen.",
+      "usedBy": [
+        "hoyoverse"
+      ]
+    },
+    {
+      "url": "https://www.instagram.com/reel/DcTqcSICdwc/",
+      "status": "user-supplied-optional",
+      "note": "Vom Nutzer genannter thematischer Ausgangspunkt. Automatischer Abruf eingeschränkt; wird nicht als Beleg für einen offiziellen Stand oder Termin verwendet.",
+      "usedBy": [
+        "big-n-club-watch"
+      ]
+    },
+    {
+      "url": "https://www.levelinfinite.com/news/level-infinite-gamescom-2026-lineup/",
+      "status": "verified-current-content",
+      "note": "Offizieller Gamescom-2026-Line-up-Beitrag mit Halle, Stand, Demos und Aktionen erreichbar.",
+      "usedBy": [
+        "level-infinite"
+      ]
+    },
+    {
+      "url": "https://www.neteasegames.com/news/20260811/37000_1310671.html",
+      "status": "verified-current-content",
+      "note": "Offizieller NetEase-Gamescom-2026-Beitrag mit Standorten, Aktionen und Goodies erreichbar.",
+      "usedBy": [
+        "netease"
+      ]
+    },
+    {
+      "url": "https://www.nintendo.com/de-de/News/2026/August/Nintendo-auf-der-gamescom-2026-3145761.html",
+      "status": "verified-current-content",
+      "note": "Offizieller Nintendo-Gamescom-2026-Beitrag erreichbar.",
+      "usedBy": [
+        "big-n-club-watch",
+        "nintendo"
+      ]
+    },
+    {
+      "url": "https://www.samsung.com/de/gaming/",
+      "status": "verified-canonical-homepage",
+      "note": "Offizielle deutsche Samsung-Gaming-Seite erreichbar.",
+      "usedBy": [
+        "samsung"
+      ]
+    },
+    {
+      "url": "https://www.scssoft.com/",
+      "status": "verified-canonical-homepage",
+      "note": "Offizielle SCS-Software-Seite erreichbar.",
+      "usedBy": [
+        "scs-software"
+      ]
+    },
+    {
+      "url": "https://www.sega.co.jp/en/",
+      "status": "verified-canonical-homepage",
+      "note": "Offizielle internationale SEGA-Unternehmensseite erreichbar; keine unbestätigte Gamescom-Titelliste.",
+      "usedBy": [
+        "sega"
+      ]
+    },
+    {
+      "url": "https://www.srh-university.de/de/hochschule/hochschulteam/junge-jens/",
+      "status": "verified-canonical-homepage",
+      "note": "Offizielle SRH-Profilseite von Prof. Dr. Jens Junge erreichbar.",
+      "usedBy": [
+        "spielwissenschaft-panel"
+      ]
+    },
+    {
+      "url": "https://www.t3.com/home-living/ikeas-next-big-collaboration-could-have-you-sitting-on-an-xbox-controller",
+      "status": "verified-current-content",
+      "note": "Aktueller Medienbericht zur Xbox-IKEA-Kollaboration erreichbar; kein genauer Vor-Ort-Slot daraus abgeleitet.",
+      "usedBy": [
+        "xbox-ikea"
+      ]
+    },
+    {
+      "url": "https://www.theverge.com/entertainment/976073/gta-6-trailer-3-date-time-netflix-youtube",
+      "status": "verified-current-content",
+      "note": "Aktueller Medienbericht zum parallelen GTA-VI-Extended-Look erreichbar; nicht als Vor-Ort-Demo dargestellt.",
+      "usedBy": [
+        "gta6-netflix"
+      ]
+    }
+  ]
+}

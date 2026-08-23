@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-labelledby="t d">
+<title id="t">Hallenplan</title><desc id="d">Abstrakte lokale Illustration ohne Markenlogo</desc>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0284c7"/><stop offset="1" stop-color="#082f49"/></linearGradient></defs>
+<rect width="960" height="540" rx="44" fill="url(#g)"/>
+<circle cx="790" cy="90" r="180" fill="#fff" opacity=".12"/><circle cx="120" cy="470" r="210" fill="#fff" opacity=".08"/>
+<path d="M140 345 C240 245 350 425 455 305 S680 210 810 310" fill="none" stroke="#fff" stroke-width="34" stroke-linecap="round" opacity=".25"/>
+<rect x="110" y="110" width="292" height="196" rx="46" fill="#fff" opacity=".92"/>
+<circle cx="196" cy="210" r="30" fill="#0284c7"/><circle cx="316" cy="210" r="30" fill="#0284c7"/>
+<path d="M232 164v92M186 210h92" stroke="#082f49" stroke-width="20" stroke-linecap="round" opacity=".7"/>
+<circle cx="312" cy="185" r="11" fill="#082f49"/><circle cx="342" cy="215" r="11" fill="#082f49"/>
+<text x="110" y="405" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="68" font-weight="800" fill="#ffffff">Hallenplan</text>
+<text x="114" y="458" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="25" fill="#ffffff" opacity=".86">Gamescom 2026 · lokaler Platzhalter</text>
+</svg>

@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="Offlinefähiger, persönlicher Gamescom-Guide für Donnerstag und Freitag 2026 mit Karte, Hallen, Zeitplan, Favoriten und lokalen Notizen.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="GC26 Guide">
+  <meta name="format-detection" content="telephone=no">
+  <title>Gamescom 2026 – Zwei-Tage-Guide</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/icon-180.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <noscript>
+    <div class="noscript">Diese App benötigt JavaScript. Die Quellenliste findest du in <a href="./SOURCES.md">SOURCES.md</a>.</div>
+  </noscript>
+
+  <div id="app" class="app-shell" aria-busy="true">
+    <div id="network-banner" class="network-banner" role="status" hidden>
+      <span aria-hidden="true">↯</span>
+      <span>Offline-Modus: App, Karte, Daten, Favoriten und Notizen bleiben verfügbar. Externe Quellen brauchen Netz.</span>
+    </div>
+
+    <header class="topbar">
+      <button class="icon-button brand-home" id="home-button" type="button" aria-label="Zur Startseite">
+        <img src="./assets/icons/favicon.svg" alt="" width="34" height="34">
+      </button>
+      <button class="brand-copy" id="brand-button" type="button" aria-label="Startseite öffnen">
+        <strong>GC26 Guide</strong>
+        <span>Do 27. + Fr 28. August</span>
+      </button>
+      <div class="topbar-actions">
+        <button class="icon-button" id="install-button" type="button" aria-label="App installieren" title="Zum Home-Bildschirm">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3"/></svg>
+        </button>
+        <button class="icon-button notes-button" id="notes-button" type="button" aria-label="Eigene Notizen öffnen">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6zM9 8h6M9 12h6M9 16h4"/></svg>
+          <span class="count-badge" id="notes-count" aria-label="0 Notizen">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section id="filter-shell" class="filter-shell" hidden aria-label="Filter">
+      <div class="filter-compact">
+        <label class="search-field" for="global-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
+          <input id="global-search" type="search" placeholder="Aussteller, Spiel, Halle …" autocomplete="off">
+        </label>
+        <button class="filter-open-button" id="filter-open-button" type="button" aria-expanded="false" aria-controls="filter-panel">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+          <span>Filter</span>
+          <span id="active-filter-count" class="mini-count" hidden>0</span>
+        </button>
+      </div>
+      <div class="filter-meta-row">
+        <strong id="result-count">0 Treffer</strong>
+        <span id="filter-summary">Alle Themen · beide Tage</span>
+        <button id="filter-reset-inline" class="text-button" type="button" hidden>Zurücksetzen</button>
+      </div>
+      <div id="filter-panel" class="filter-panel" hidden>
+        <div class="filter-section">
+          <div class="section-heading-row">
+            <h2>Themen</h2>
+            <span>Mehrere Chips = mindestens eines davon</span>
+          </div>
+          <div id="category-filters" class="chip-grid" role="group" aria-label="Kategorien"></div>
+        </div>
+        <div class="filter-grid">
+          <label>
+            <span>Tag</span>
+            <select id="day-filter">
+              <option value="all">Do + Fr</option>
+              <option value="2026-08-27">Nur Donnerstag</option>
+              <option value="2026-08-28">Nur Freitag</option>
+            </select>
+          </label>
+          <label>
+            <span>Halle</span>
+            <select id="hall-filter"><option value="all">Alle Hallen</option></select>
+          </label>
+        </div>
+        <div class="toggle-grid">
+          <label class="toggle"><input id="goodie-filter" type="checkbox"><span></span><b>Nur mit Goodies</b></label>
+          <label class="toggle"><input id="highlight-filter" type="checkbox"><span></span><b>Nur Highlights</b></label>
+          <label class="toggle"><input id="favorites-filter" type="checkbox"><span></span><b>Nur Favoriten</b></label>
+        </div>
+        <button id="filter-reset-button" class="secondary-button wide" type="button">Alle Filter zurücksetzen</button>
+      </div>
+    </section>
+
+    <main id="main-content">
+      <section id="view-home" class="view home-view" data-view="home">
+        <div class="hero-card">
+          <div class="hero-kicker">DEIN BESUCH · 27.–28.08.2026</div>
+          <h1>Zwei Tage Gamescom.<br><span>Ohne planloses Hallen-Hopping.</span></h1>
+          <p>Eine offlinefähige, persönliche Messe-App mit verifizierten Quellen, grober Hallenkarte, Favoriten, Live-Zeitplan und eigenen Notizen.</p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-nav="map">Karte öffnen</button>
+            <button class="secondary-button" type="button" data-nav="halls">Hallen entdecken</button>
+          </div>
+          <div class="hero-status" id="home-source-status">
+            <span class="status-dot"></span>
+            <span>Quellen werden geladen …</span>
+          </div>
+        </div>
+
+        <section class="home-section" aria-labelledby="start-heading">
+          <div class="section-heading-row home-heading">
+            <div><span class="eyebrow">In 30 Sekunden</span><h2 id="start-heading">So startest du</h2></div>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card"><span>1</span><h3>Highlights herzen</h3><p>Markiere zuerst 5–10 Must-sees. Favoriten leuchten auf der Karte.</p></article>
+            <article class="step-card"><span>2</span><h3>Halle wählen</h3><p>Tippe in „Hallen“ direkt auf H6, H7, H9 oder H10 – ohne Filter-Umweg.</p></article>
+            <article class="step-card"><span>3</span><h3>Fund hinzufügen</h3><p>Mit dem Plus speicherst du spontan entdeckte Stände, Zeiten und Notizen lokal.</p></article>
+          </div>
+        </section>
+
+        <section class="home-section" aria-labelledby="hall-overview-heading">
+          <div class="section-heading-row home-heading">
+            <div><span class="eyebrow">Grobe Orientierung</span><h2 id="hall-overview-heading">Welche Halle ist was?</h2></div>
+            <button class="text-button" type="button" data-nav="map">Auf Karte</button>
+          </div>
+          <div id="home-hall-grid" class="home-hall-grid"></div>
+        </section>
+
+        <section class="home-section" aria-labelledby="routes-heading">
+          <div class="section-heading-row home-heading">
+            <div><span class="eyebrow">Nicht alles schaffen wollen</span><h2 id="routes-heading">Drei sinnvolle Routen</h2></div>
+          </div>
+          <div id="route-grid" class="route-grid"></div>
+        </section>
+
+        <section class="home-section" aria-labelledby="top-picks-heading">
+          <div class="section-heading-row home-heading">
+            <div><span class="eyebrow">Breit interessant</span><h2 id="top-picks-heading">Erste Favoriten-Kandidaten</h2></div>
+          </div>
+          <div id="home-top-picks" class="horizontal-cards"></div>
+        </section>
+
+        <section class="home-section reality-section" aria-labelledby="reality-heading">
+          <div class="section-heading-row home-heading">
+            <div><span class="eyebrow">Hype sauber eingeordnet</span><h2 id="reality-heading">Vor Ort, online oder noch offen?</h2></div>
+          </div>
+          <div id="home-reality-grid" class="reality-grid"></div>
+        </section>
+
+        <section class="source-callout">
+          <div>
+            <strong>Wichtiger Quellenhinweis</strong>
+            <p>Frühere Besucher-Deep-Links sind entfernt. Die App verlinkt nur noch das aktuelle 2026-Ausstellerportal, den aktuellen Hallenplan und das Congress-Programm.</p>
+          </div>
+          <a class="secondary-button" href="https://exhibitors.gamescom.global/en/gamescom-exhibitors/hall-plan/" target="_blank" rel="noopener">Offiziellen Plan öffnen</a>
+        </section>
+      </section>
+
+      <section id="view-map" class="view content-view" data-view="map" hidden>
+        <div class="page-heading">
+          <div><span class="eyebrow">Grobe Offline-Karte</span><h1>Karte</h1><p>Favoriten haben einen kräftigen Ring und ein Herz.</p></div>
+          <button id="map-favorites-toggle" class="pill-button" type="button" aria-pressed="false">♥ hervorheben</button>
+        </div>
+
+        <div class="location-card">
+          <div class="location-copy">
+            <span class="location-icon" aria-hidden="true">◎</span>
+            <div><strong id="location-title">Standort noch nicht aktiv</strong><p id="location-text">Indoor-GPS ist nur grob. Am zuverlässigsten ist die manuelle Hallenauswahl.</p></div>
+          </div>
+          <div class="location-actions">
+            <button id="geolocation-button" class="secondary-button compact" type="button">GPS versuchen</button>
+            <label class="compact-select"><span>Ich bin in</span><select id="manual-hall-select"><option value="">Halle wählen</option></select></label>
+          </div>
+        </div>
+
+        <div class="map-card">
+          <div class="map-toolbar">
+            <div><strong id="map-marker-count">0 Marker</strong><span>Tippen für Kurzinfo</span></div>
+            <a href="https://exhibitors.gamescom.global/en/gamescom-exhibitors/hall-plan/" target="_blank" rel="noopener">Offizieller Plan ↗</a>
+          </div>
+          <div class="map-scroll" id="map-scroll">
+            <svg id="venue-map" class="venue-map" viewBox="0 0 100 72" role="img" aria-labelledby="map-title map-desc">
+              <title id="map-title">Vereinfachter Lageplan der Gamescom-Hallen</title>
+              <desc id="map-desc">Hallen 1 bis 10, Confex, Marker und eine ungefähre Standortanzeige.</desc>
+              <g id="map-halls"></g>
+              <g id="map-routes"></g>
+              <g id="map-markers"></g>
+              <g id="map-user-location"></g>
+            </svg>
+          </div>
+          <div class="map-legend">
+            <span><i class="legend-dot normal"></i>Eintrag</span>
+            <span><i class="legend-dot favorite">♥</i>Favorit</span>
+            <span><i class="legend-dot own">+</i>Eigener Fund</span>
+            <span><i class="legend-dot here"></i>Standort grob</span>
+          </div>
+        </div>
+        <div id="map-preview" class="map-preview" hidden></div>
+        <div class="info-callout"><strong>Warum nur ungefähr?</strong><p>GPS-Signale werden in großen Stahlhallen reflektiert oder blockiert. Die App projiziert Koordinaten nur grob auf das Gelände; eine gewählte Halle überschreibt deshalb die automatische Position.</p></div>
+      </section>
+
+      <section id="view-halls" class="view content-view" data-view="halls" hidden>
+        <div class="page-heading">
+          <div><span class="eyebrow">Direkt statt umständlich filtern</span><h1>Hallen</h1><p>Wähle oben eine Halle. „Alle“ zeigt die komplette Übersicht.</p></div>
+        </div>
+        <div class="hall-jump-shell">
+          <div id="hall-quick-nav" class="hall-quick-nav" role="tablist" aria-label="Halle auswählen"></div>
+          <div class="current-hall-strip">
+            <span id="current-hall-label">Noch keine aktuelle Halle gewählt</span>
+            <button id="set-current-hall-button" class="text-button" type="button">Standort setzen</button>
+          </div>
+        </div>
+        <div id="hall-results" class="hall-results"></div>
+      </section>
+
+      <section id="view-schedule" class="view content-view" data-view="schedule" hidden>
+        <div class="page-heading schedule-heading">
+          <div><span class="eyebrow">Nur dein Aufenthalt</span><h1>Live-Zeitplan</h1><p>Feste Termine kompakt – Stände bleiben flexibel.</p></div>
+          <div id="clock-pill" class="clock-pill">Vorschau</div>
+        </div>
+        <div class="schedule-day-tabs" role="tablist" aria-label="Tag im Zeitplan">
+          <button type="button" data-schedule-day="2026-08-27" class="active">Do 27.</button>
+          <button type="button" data-schedule-day="2026-08-28">Fr 28.</button>
+          <button type="button" data-schedule-day="all">Beide</button>
+        </div>
+        <div id="next-up-card" class="next-up-card" hidden></div>
+        <div id="schedule-results" class="schedule-results"></div>
+        <section class="flexible-stops">
+          <div class="section-heading-row"><div><span class="eyebrow">Ohne feste Uhrzeit</span><h2>Flexible Favoriten</h2></div><button class="text-button" type="button" data-nav="favorites">Alle Favoriten</button></div>
+          <div id="flexible-favorites" class="compact-list"></div>
+        </section>
+      </section>
+
+      <section id="view-favorites" class="view content-view" data-view="favorites" hidden>
+        <div class="page-heading">
+          <div><span class="eyebrow">Dein persönlicher Fahrplan</span><h1>Favoriten</h1><p>Feste Termine zuerst, danach nach Halle sortiert.</p></div>
+          <button id="export-plan-button" class="secondary-button compact" type="button">Plan sichern</button>
+        </div>
+        <div id="favorites-results"></div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Hauptnavigation">
+      <button type="button" data-nav="map" aria-label="Karte"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3zM9 3v15M15 6v15"/></svg><span>Karte</span></button>
+      <button type="button" data-nav="halls" aria-label="Hallen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V8l8-4 8 4v12M8 20v-5h8v5M8 10h2M14 10h2"/></svg><span>Hallen</span></button>
+      <span class="fab-spacer" aria-hidden="true"></span>
+      <button type="button" data-nav="schedule" aria-label="Zeitplan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v17H5zM8 2v4M16 2v4M5 9h14M8 13h3M8 17h6"/></svg><span>Zeitplan</span></button>
+      <button type="button" data-nav="favorites" aria-label="Favoriten"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20S4 15 4 9a4 4 0 0 1 7-3 4 4 0 0 1 7 3c0 6-6 11-6 11Z"/></svg><span>Favoriten</span><span id="favorite-nav-count" class="nav-count" hidden>0</span></button>
+    </nav>
+
+    <button id="add-note-fab" class="add-note-fab" type="button" aria-label="Eigenen Fund oder Notiz hinzufügen">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+    </button>
+
+    <dialog id="entry-dialog" class="sheet-dialog entry-dialog">
+      <div class="dialog-handle" aria-hidden="true"></div>
+      <button class="dialog-close icon-button" type="button" data-close-dialog aria-label="Schließen">×</button>
+      <div id="entry-dialog-content"></div>
+    </dialog>
+
+    <dialog id="note-dialog" class="sheet-dialog note-dialog">
+      <div class="dialog-handle" aria-hidden="true"></div>
+      <button class="dialog-close icon-button" type="button" data-close-dialog aria-label="Schließen">×</button>
+      <form id="note-form" method="dialog">
+        <input type="hidden" id="note-id">
+        <div class="dialog-heading"><span class="eyebrow">Nur auf diesem Gerät</span><h2 id="note-dialog-title">Fund hinzufügen</h2><p>Speichere einen entdeckten Stand, Treffpunkt oder persönlichen Reminder.</p></div>
+        <label><span>Titel *</span><input id="note-title" required maxlength="90" placeholder="z. B. Coole Demo bei Stand B042"></label>
+        <div class="form-grid">
+          <label><span>Halle *</span><select id="note-hall" required></select></label>
+          <label><span>Stand</span><input id="note-stand" maxlength="40" placeholder="z. B. B042"></label>
+        </div>
+        <div class="form-grid">
+          <label><span>Tag</span><select id="note-day"><option value="2026-08-27">Do 27.08.</option><option value="2026-08-28">Fr 28.08.</option></select></label>
+          <label><span>Uhrzeit optional</span><input id="note-time" type="time"></label>
+        </div>
+        <label><span>Notiz</span><textarea id="note-text" rows="5" maxlength="700" placeholder="Was willst du dir merken?"></textarea></label>
+        <label class="favorite-checkbox"><input id="note-favorite" type="checkbox" checked><span>Direkt als Favorit speichern</span></label>
+        <p class="privacy-note">Keine Cloud, kein Login: Eigene Einträge und Favoriten bleiben in <code>localStorage</code> dieses Browsers.</p>
+        <div class="dialog-actions"><button class="secondary-button" type="button" data-close-dialog>Abbrechen</button><button class="primary-button" type="submit">Speichern</button></div>
+      </form>
+    </dialog>
+
+    <dialog id="notes-drawer" class="sheet-dialog notes-drawer">
+      <div class="dialog-handle" aria-hidden="true"></div>
+      <button class="dialog-close icon-button" type="button" data-close-dialog aria-label="Schließen">×</button>
+      <div class="dialog-heading"><span class="eyebrow">Dein lokaler Notizblock</span><h2>Eigene Funde</h2><p>Bearbeiten, auf der Karte öffnen oder als JSON sichern.</p></div>
+      <div class="notes-tools">
+        <button id="notes-add-button" class="primary-button compact" type="button">+ Neuer Eintrag</button>
+        <button id="notes-export-button" class="secondary-button compact" type="button">Export</button>
+        <label class="secondary-button compact file-button">Import<input id="notes-import-input" type="file" accept="application/json,.json"></label>
+      </div>
+      <div id="notes-list" class="notes-list"></div>
+    </dialog>
+
+    <dialog id="hall-picker-dialog" class="mini-dialog">
+      <button class="dialog-close icon-button" type="button" data-close-dialog aria-label="Schließen">×</button>
+      <div class="dialog-heading"><span class="eyebrow">Manueller Indoor-Fallback</span><h2>Wo bist du gerade?</h2><p>Diese Auswahl ist meist zuverlässiger als GPS in den Hallen.</p></div>
+      <div id="hall-picker-buttons" class="hall-picker-buttons"></div>
+      <button id="clear-current-hall" class="text-button danger" type="button">Gesetzten Standort entfernen</button>
+    </dialog>
+
+    <dialog id="install-dialog" class="mini-dialog">
+      <button class="dialog-close icon-button" type="button" data-close-dialog aria-label="Schließen">×</button>
+      <div class="dialog-heading"><span class="eyebrow">Offline auf dem iPhone</span><h2>Zum Home-Bildschirm</h2></div>
+      <ol class="install-steps"><li>Diese Seite einmal vollständig online öffnen.</li><li>In Safari auf <strong>Teilen</strong> tippen.</li><li><strong>Zum Home-Bildschirm</strong> auswählen.</li><li>Vor der Messe einmal im Flugmodus testen.</li></ol>
+      <p class="privacy-note">iOS kann App-Caches nach langer Nichtnutzung aufräumen. Kurz vor der Gamescom deshalb noch einmal online öffnen.</p>
+    </dialog>
+
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  </div>
+
+  <script src="./js/app.js" defer></script>
+</body>
+</html>

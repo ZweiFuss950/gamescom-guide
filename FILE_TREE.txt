@@ -1,0 +1,57 @@
+/
+├── assets/
+│   ├── icons/
+│   │   ├── favicon.svg
+│   │   ├── icon-180.png
+│   │   ├── icon-192.png
+│   │   ├── icon-512.png
+│   │   └── maskable-512.png
+│   ├── illustrations/
+│   │   ├── community.svg
+│   │   ├── hardware.svg
+│   │   ├── indie.svg
+│   │   ├── map.svg
+│   │   ├── nintendo.svg
+│   │   ├── publisher.svg
+│   │   ├── reality.svg
+│   │   ├── retro.svg
+│   │   ├── talk.svg
+│   │   └── xbox.svg
+│   ├── map/
+│   │   └── simplified-halls.svg
+│   └── qa/
+│       ├── mobile-favorites-v3.png
+│       ├── mobile-halls-h7-v3.png
+│       ├── mobile-home-v3.png
+│       ├── mobile-map-favorites-v3.png
+│       ├── mobile-map-own-note-v3.png
+│       ├── mobile-offline-restart-v3.png
+│       └── mobile-schedule-live-v3.png
+├── css/
+│   └── styles.css
+├── data/
+│   ├── browser-qa.json
+│   ├── data.json
+│   ├── link-audit.json
+│   ├── schema.json
+│   └── static-validation.json
+├── js/
+│   └── app.js
+├── tests/
+│   ├── browser_qa.py
+│   └── validate_repo.py
+├── .nojekyll
+├── CHANGELOG.md
+├── DATA_STATUS.md
+├── FILE_TREE.txt
+├── index.html
+├── LICENSE
+├── LINK_CHECK.md
+├── manifest.json
+├── offline.html
+├── PACKAGE_REPORT.md
+├── QA_BROWSER.md
+├── QA_REPORT.md
+├── README.md
+├── SOURCES.md
+└── sw.js

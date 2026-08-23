@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "baseUrl": "http://127.0.0.1:8766/gamescom-guide-2026-v3-1-1-verify/deploy/",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "checks": [
+    "App lädt mit Version 3.1.1 und 23 redaktionellen Einträgen",
+    "Landingpage ist mobil, weiß und ohne horizontalen Overflow",
+    "Installationshilfe ist auf iOS direkt erreichbar",
+    "Direkte Hallenwahl und einklappbare Detailinformationen funktionieren",
+    "Favoritenmarker, Fokusmodus und Tastaturbedienung der Karte funktionieren",
+    "Manueller Indoor-Standort-Fallback funktioniert",
+    "Eigene Einträge erscheinen lokal, als Favorit und auf der Karte",
+    "Notizblock, Bearbeiten und JSON-Export funktionieren",
+    "Favoriten, aktuelle Halle und Notizen bleiben nach Reload erhalten",
+    "Live-Zeitplan erkennt laufende Termine und hält Talks kompakt",
+    "Deep-Link vom Zeitplan zur fokussierten Kartenposition funktioniert",
+    "Favoriten-Tab gruppiert Inhalte und bietet alle relevanten Aktionen",
+    "Freitextsuche, Trefferzähler und Ein-Klick-Reset funktionieren",
+    "Service Worker kontrolliert die App und cached die vollständige App-Shell",
+    "App startet nach echtem Browser-Neustart offline mit Karte, Daten, Favoriten und Notizen"
+  ],
+  "errors": [],
+  "screenshots": [
+    "assets/qa/mobile-home-v3.png",
+    "assets/qa/mobile-halls-h7-v3.png",
+    "assets/qa/mobile-map-favorites-v3.png",
+    "assets/qa/mobile-map-own-note-v3.png",
+    "assets/qa/mobile-schedule-live-v3.png",
+    "assets/qa/mobile-favorites-v3.png",
+    "assets/qa/mobile-offline-restart-v3.png"
+  ]
+}

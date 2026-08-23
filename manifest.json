@@ -1,0 +1,35 @@
+{
+  "id": "./",
+  "name": "Gamescom 2026 – Zwei-Tage-Guide",
+  "short_name": "GC26 Guide",
+  "description": "Offlinefähiger persönlicher Guide für Donnerstag und Freitag der Gamescom 2026.",
+  "lang": "de-DE",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "categories": ["travel", "entertainment", "utilities"],
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

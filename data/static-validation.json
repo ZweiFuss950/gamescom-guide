@@ -1,0 +1,18 @@
+{
+  "ok": true,
+  "checks": [
+    "Pflichtdateien vorhanden",
+    "JSON-Daten und Schema lesbar",
+    "Big Player, Fan-, Indie-, Retro- und Reality-Checks enthalten",
+    "Pflichtlinks, Tage, Bilder und Kartenpositionen je Eintrag geprüft",
+    "Vorgegebenes Spielwissenschaft-Panel exakt geprüft",
+    "Link-Audit deckt alle Ziel-URLs ab",
+    "Manifest, Apple- und PWA-Icons geprüft",
+    "Service-Worker-App-Shell geprüft",
+    "HTML, iOS-Metadaten und problematische Altlinks geprüft",
+    "Relative GitHub-Pages-Pfade geprüft"
+  ],
+  "errors": [],
+  "entryCount": 23,
+  "uniqueUrlCount": 25
+}
