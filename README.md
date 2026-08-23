@@ -1,7 +1,5 @@
 # GC26 Guide – Gamescom 2026 für Donnerstag und Freitag
 
-**Finale geprüfte Version: 3.1.2 · Datenstand 23. August 2026**
-
 Ein statischer, mobile-first Gamescom-Guide für **Donnerstag, 27. August 2026**, und **Freitag, 28. August 2026** in der Koelnmesse. Die App läuft ohne Framework und Build-Step auf GitHub Pages und kann nach einem vollständigen Online-Aufruf weitgehend offline genutzt werden.
 
 ## Enthalten
@@ -15,16 +13,6 @@ Ein statischer, mobile-first Gamescom-Guide für **Donnerstag, 27. August 2026**
 - lokaler Notizblock für eigene Funde und Termine, inklusive JSON-Export und -Import
 - PWA-Manifest, Apple-Meta-Tags, Icons und versionierter Service Worker
 - ausschließlich lokale Illustrationen, damit keine fremden Bilder für den Offline-Start benötigt werden
-
-## Direkt auf GitHub Pages veröffentlichen
-
-1. Den **Inhalt dieses Ordners** in den Root eines GitHub-Repositories hochladen. `index.html` muss direkt im Repo-Root liegen.
-2. In GitHub unter **Settings → Pages** als Quelle den gewünschten Branch und den Ordner `/ (root)` wählen.
-3. Die veröffentlichte URL einmal vollständig online öffnen.
-4. Auf dem iPhone in Safari **Teilen → Zum Home-Bildschirm** wählen.
-5. Vor der Messe einmal im Flugmodus öffnen und Karte, Hallen, Zeitplan und Favoriten prüfen.
-
-Alle internen Pfade sind relativ (`./…`). Dadurch funktioniert das Projekt auch unter einer typischen Projekt-URL wie `https://username.github.io/repo-name/`.
 
 ## Inhalte aktualisieren
 
@@ -88,16 +76,6 @@ Favoriten und eigene Notizen liegen nur im `localStorage` dieses Browsers. Der B
 - [`CHANGELOG.md`](./CHANGELOG.md): Änderungen der überarbeiteten Fassung
 
 Die App trennt bewusst zwischen bestätigter Vor-Ort-Präsenz, noch offenem Detailprogramm und parallelen Online-Ereignissen. Das betrifft insbesondere PlayStation, Xbox × IKEA, BIG-N-Club und GTA VI.
-
-## Lokale Tests
-
-```bash
-python3 -m http.server 8765
-python3 tests/validate_repo.py
-python3 tests/browser_qa.py
-```
-
-Der Browser-Test verwendet Playwright und Chromium. Die statische Prüfung validiert zusätzlich jede lokale SVG-Datei als XML; der Browser-Test lädt alle referenzierten Illustrationen als echte Bilder. Die fertigen Prüfberichte und Smartphone-Screenshots liegen in `QA_REPORT.md`, `data/browser-qa.json` und `assets/qa/`.
 
 ## Datenschutz
 
